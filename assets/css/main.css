@@ -956,13 +956,13 @@ input, select, textarea {
 
 
 a:hover {
-	background-color: white;
+	background-color: black;
 	color: black;
 	transform: scale(1.1);
 	font-weight: bold; /* Texte en gras au survol */
 }
 button:hover {
-	background-color: white;
+	background-color: black;
 	color: black;
 	transform: scale(1.1);
 	font-weight: bold; /* Texte en gras au survol */
@@ -1782,4 +1782,21 @@ button:hover {
 	width: 80px;
 	height: 60px;
 }
+
+.image-adaptable {
+	max-width: 100%; /* Adapte la largeur de l'image à son conteneur */
+	height: auto; /* Garde les proportions de l'image */
+	display: block; /* Évite les espaces blancs en dessous de l'image */
+	margin: 20px auto; /* Centre l'image avec un espace autour */
+	border-radius: 8px; /* Ajoute des bords arrondis pour un effet visuel agréable */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour un effet esthétique */
+}
+
+.icon.brands.fa-github {
+	color: black; /* Change la couleur de l'icône en noir */
+}
+
+
+
+
 
