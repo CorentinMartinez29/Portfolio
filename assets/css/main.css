@@ -962,8 +962,8 @@ a:hover {
 	font-weight: bold; /* Texte en gras au survol */
 }
 button:hover {
-	background-color: black;
-	color: black;
+	background-color: white;
+	color: white;
 	transform: scale(1.1);
 	font-weight: bold; /* Texte en gras au survol */
 }
@@ -1057,8 +1057,8 @@ button:hover {
 		background-color: transparent;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #000000;
-		color: #000000 !important;
+		box-shadow: inset 0 0 0 1px white;
+		color: black;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8rem;
@@ -1072,6 +1072,11 @@ button:hover {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+	}
+
+	#toggleButton1, #toggleButton2, #toggleButton3, #toggleButton4, #toggleButton5, #toggleButton6{
+		color: white;
+		margin-bottom: 30px;
 	}
 
 		input[type="submit"]:hover,
@@ -1580,6 +1585,8 @@ button:hover {
 		}
 
 /* Main */
+
+
 
 	#main {
 		-moz-flex-grow: 1;

@@ -49,6 +49,7 @@
 								<li><a href="#about">A propos</a></li>
 								<li><a href="#work">Projets</a></li>
 								<li><a href="#capacites">Capacités</a></li>
+								<li><a href="#portfolioApprentissage">Portfolio d’apprentissage</a></li>
 								<li><a href="#contact">Contact</a></li>
 
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -58,6 +59,86 @@
 
 				<!-- Main -->
 					<div id="main">
+						<!-- Compétences -->
+						<!-- Portfolio d’apprentissage -->
+						<article id="portfolioApprentissage">
+							<h2 class="major">Portfolio d’apprentissage</h2>
+
+							<!-- Compétence 2 -->
+							<section>
+								<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
+								<button id="toggleButton5">Afficher détaille Compétence</button>
+								<div id ="contexte5" style="display: none"><br>
+								<p><strong>Niveau 2</strong> – Déployer des services dans une architecture réseau</p>
+
+								<h4>📌 Composantes essentielles</h4>
+								<ul>
+									<li><strong>CE3.01 :</strong> J’ai mis en place une fonctionnalité de réinitialisation de mot de passe sécurisée, nécessitant une vérification de l’adresse e-mail et un token temporaire. J’ai également utilisé des techniques de sanitization pour empêcher les attaques par injection.</li>
+									<li><strong>CE3.03 :</strong> J’ai veillé à respecter les standards de développement web : utilisation d’une architecture MVC claire, respect des conventions de nommage, structuration des fichiers, validation HTML/CSS, et vérification des entrées côté client et serveur.</li>
+									<li><strong>CE3.02 :</strong> Le site est optimisé pour un affichage rapide en local, avec un code allégé et des requêtes SQL efficaces. Une mise en ligne avec HTTPS est prévue pour garantir rapidité, fiabilité et sécurité.</li>
+									<li><strong>CE3.04 :</strong> En cas d’évolution du projet, tout est documenté : code versionné sur GitHub, branche `main` unique, script Docker pour redéploiement local rapide.</li>
+								</ul>
+
+								<h4>🧠 Apprentissages Critiques</h4>
+								<ul>
+									<li><strong>AC1 :</strong> J’ai intégré un formulaire de contact dynamique en PHP/JS qui envoie des e-mails via la librairie PHPMailer, fonctionnant en local avec un serveur mail simulé.</li>
+									<li><strong>AC2 :</strong> Le serveur web a été déployé en local via Docker, en créant des conteneurs pour Apache, PHP et MySQL. J’ai configuré les ports, les volumes et les services nécessaires à son bon fonctionnement.</li>
+									<li><strong>AC3 :</strong> Les mots de passe sont hachés, les formulaires sont sécurisés côté client et serveur. J’ai prévu le protocole HTTPS et une configuration .htaccess pour limiter l’accès à certaines pages sensibles.</li>
+								</ul>
+								</div>
+							</section>
+
+							<!-- Compétence 3 -->
+							<section>
+								<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
+								<button id="toggleButton6">Afficher détaille Compétence</button>
+								<div id ="contexte6" style="display: none"><br>
+								<p><strong>Niveau 2</strong> – Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
+
+								<h4>📌 Composantes essentielles</h4>
+								<ul>
+									<li><strong>CE4.01 :</strong> Toutes les données sensibles sont protégées : mots de passe hachés, aucune donnée stockée sans consentement, et possibilité de suppression de compte (fonctionnalité à venir).</li>
+									<li><strong>CE4.02 :</strong> La base de données est optimisée pour limiter l’espace disque : peu de redondance, types de données adaptés, hébergement responsable prévu.</li>
+									<li><strong>CE4.03 :</strong> J’ai utilisé la logique relationnelle pour modéliser les entités, créer des relations et garantir l’intégrité des données, en m’appuyant sur la théorie des ensembles.</li>
+									<li><strong>CE4.04 :</strong> Les données sont vérifiées à l’entrée, la base est normalisée (3FN), les clés primaires/étrangères assurent la cohérence et évitent les doublons.</li>
+								</ul>
+
+								<h4>🧠 Apprentissages Critiques</h4>
+								<ul>
+									<li><strong>AC1 :</strong> J’ai réalisé un MCD puis un MPD avec MySQL Workbench, respectant les bonnes pratiques. J’ai structuré les relations produits/commandes/clients de façon optimale.</li>
+									<li><strong>AC2 :</strong> Données sécurisées : hash des mots de passe (SHA-256 ou Bcrypt selon l’environnement), protection XSS et SQLi par vérification des entrées.</li>
+									<li><strong>AC3 :</strong> Les données sont affichées dynamiquement selon les rôles (admin/client). Des requêtes SQL permettent la gestion des utilisateurs et produits.</li>
+								</ul>
+								</div>
+							</section>
+
+							<!-- Compétence 1 -->
+							<section>
+								<h3>🧭 Compétence 5 – Conduire un projet</h3>
+								<button id="toggleButton4">Afficher détaille Compétence</button>
+								<div id ="contexte4" style="display: none"><br>
+									<p><strong>Niveau 2</strong> – Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
+
+									<h4>📌 Composantes essentielles</h4>
+									<ul>
+										<li><strong>CE5.04 :</strong> J’ai su faire preuve d’initiative tout au long du projet. Par exemple, j’ai proposé d’ajouter une fonctionnalité de réinitialisation de mot de passe, qui n’était pas prévue initialement. Cette démarche a été validée par mon tuteur et a renforcé la sécurité du site. J’ai également fait preuve de créativité en suggérant une nouvelle charte graphique, plus moderne, basée sur des nuances de bleu, et d’esprit critique en repensant entièrement le site, que j’ai recommencé de zéro pour mieux répondre aux attentes commerciales.</li>
+										<li><strong>CE5.02 :</strong> J’ai pris en compte les obligations légales, notamment le respect du RGPD pour la gestion des données utilisateurs. Les formulaires contiennent des mentions légales, les données sensibles (comme les mots de passe) sont hachées, et j’ai prévu l’intégration d’une politique de confidentialité lors de la mise en ligne.</li>
+										<li><strong>CE5.01 :</strong> J’ai participé à plusieurs réunions avec la direction commerciale (notamment Camille Rumeau), mon tuteur Michel Sala, et l’équipe de vente pour recueillir les besoins et valider les orientations prises. Ces échanges réguliers m’ont permis de m’assurer que le développement du site était aligné avec les attentes réelles de l’entreprise.</li>
+										<li><strong>CE5.03 :</strong> J’ai conçu le site pour qu’il soit accessible à tous, même aux personnes peu à l’aise avec le numérique (ex. : textes clairs, navigation intuitive). Je me suis aussi assuré que le site soit hébergé sur un serveur éco-responsable prévu dans le cahier des charges, dans une démarche durable.</li>
+									</ul>
+
+									<h4>🧠 Apprentissages Critiques</h4>
+									<ul>
+										<li><strong>AC1 :</strong> Avant de commencer le développement, j’ai analysé les processus internes à La Pêcherie Cettoise : la gestion des commandes, la relation client, les actions commerciales… Cela m’a permis de structurer le futur site vitrine et le module e-commerce en lien avec le fonctionnement réel de l’entreprise.</li>
+										<li><strong>AC2 :</strong> Grâce à plusieurs réunions, j’ai pu dresser un cahier des charges complet listant les attentes du client : valoriser les produits, améliorer l’image de l’entreprise, permettre un futur passage à la vente en ligne. J’ai aussi pris en compte le profil des utilisateurs finaux, principalement des clients fidèles ou des touristes de passage.</li>
+										<li><strong>AC3 :</strong> Avant de démarrer, j’ai analysé mes ressources : temps imparti, outils disponibles (PHPStorm, Docker, GitHub), compétences techniques. J’ai écarté des solutions trop complexes ou irréalistes et privilégié une architecture MVC simple mais efficace, adaptée à mon niveau et au besoin de l’entreprise.</li>
+										<li><strong>AC4 :</strong> J’ai mis en place une méthode agile avec un outil de gestion de tâches (Trello), découpé le projet en sprints (charte graphique, création des pages statiques, développement du backend…), planifié les deadlines, et organisé des réunions régulières pour faire valider les avancées. Cela m’a permis de livrer un travail clair, structuré, et conforme aux objectifs.</li>
+									</ul>
+								</div>
+							</section>
+						</article>
+
+
 
 						<!-- Capacités -->
 						<article id="capacites">
@@ -108,6 +189,7 @@
 							<!-- Bouton pour afficher/masquer le contexte -->
 							<button id="toggleButton1">Afficher Contexte du Projet</button>
 							<div id ="contexte1" style="display: none"><br>
+								<img src="images/ImageE3SETE.png" alt="Contexte SAE Application Web" class="image-adaptable">
 								<p style="text-indent: 50px">
 									<strong>Contexte du projet :</strong><br>
 									L'objectif était de transposer un jeu de cartes sur ordinateur en respectant ses règles et mécaniques, avec des fonctionnalités telles que la gestion des cartes et l'exécution des actions de jeu. La logique du jeu a été implémentée à l'aide d'algorithmes qui géraient les interactions entre les cartes et les actions des joueurs, garantissant ainsi une expérience fluide et cohérente dans un environnement terminal.
@@ -135,7 +217,7 @@
 									<strong>Principaux enseignements :</strong><br>
 									Ce projet m'a permis de renforcer mes compétences en Java et en développement orienté objet, de maîtriser la gestion des interactions dans un jeu sans interface graphique, et de travailler sur l'assurance qualité grâce à des tests unitaires rigoureux.
 								</p>
-								<img src="images/ImageE3SETE.png" alt="Contexte SAE Application Web" class="image-adaptable">
+
 							</div>
 							<br><br>
 
@@ -145,9 +227,10 @@
 							</p>
 
 							<!-- Bouton pour afficher/masquer le contexte -->
-							<button id="toggleButton2">Afficher Contexte du Projet "TRAINS"</button>
+							<button id="toggleButton2">Afficher Contexte du Projet </button>
 
 							<div id="contexte2" style="display: none"><br>
+								<img src="images/imageSAETrains.png" alt="Contexte SAE Application Web" class="image-adaptable">
 								<p style="text-indent: 50px">
 									<strong>Contexte du projet :</strong><br>
 									L'objectif était de transposer un jeu de société sur ordinateur tout en respectant ses règles et sa mécanique. Les principales fonctionnalités incluent la gestion des cartes, le placement des rails et l'exécution des actions de jeu. Une modélisation précise des interactions entre cartes, plateau et règles a été essentielle pour garantir une jouabilité fluide.
@@ -180,7 +263,6 @@
 									<strong>Principaux enseignements :</strong><br>
 									Ce projet m'a permis de consolider mes compétences en Java, en développement orienté objet et en conception d'interface utilisateur, tout en renforçant mes aptitudes en tests unitaires et gestion de projet collaboratif.
 								</p>
-								<img src="images/imageSAETrains.png" alt="Contexte SAE Application Web" class="image-adaptable">
 							</div><br><br>
 							<!-- SAE – Application Web -->
 							<h3>SAE – Application Web (Septembre 2024 - Janvier 2025)</h3>
@@ -190,6 +272,7 @@
 							<!-- Bouton pour afficher/masquer le contexte -->
 							<button id="toggleButton3">Afficher Contexte du Projet</button>
 							<div id="contexte3" style="display:none;"><br>
+								<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
 								<p style="text-indent: 50px">
 									<strong>Contexte du projet :</strong>
 									Ce projet visait à fournir une solution de gestion moderne pour le suivi des étudiants. Les utilisateurs peuvent entrer des informations concernant les notes des étudiants et vérifier leur éligibilité pour des programmes particuliers. L'application devait être à la fois fonctionnelle et fluide, facilitant l'accès aux données tout en assurant une gestion efficace et sécurisée. La méthodologie Agile a permis une collaboration étroite avec les clients, garantissant que chaque itération était en phase avec leurs besoins et attentes.
@@ -216,7 +299,7 @@
 									<strong>Principaux enseignements :</strong><br>
 									Ce projet m'a permis de consolider mes compétences en développement web, en particulier en PHP et en gestion de bases de données. En travaillant en méthode Agile, j'ai appris à itérer et à améliorer constamment le produit en fonction des retours clients.
 								</p>
-								<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
+
 
 							</div>
 
@@ -276,62 +359,11 @@
 								</form>
 							</article>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
 
 								<section>
 									<h3 class="major">Lists</h3>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
 									<h4>Icons</h4>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -351,100 +383,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</ul>
 								</section>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Nom</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
 
 								<section>
 									<h3 class="major">Buttons</h3>
@@ -577,10 +516,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				});
 			}
 
+			// Fonction pour basculer l'affichage du contenu
+			function toggleProjectDisplay2(buttonId, contextId) {
+				document.getElementById(buttonId).addEventListener("click", function() {
+					var contexte = document.getElementById(contextId);
+					if (contexte.style.display === "none") {
+						contexte.style.display = "block";  // Afficher le contenu
+						this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
+					} else {
+						contexte.style.display = "none";  // Cacher le contenu
+						this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
+					}
+				});
+			}
+
+
+
 			// Appliquer la fonction à chaque bouton pour les deux projets
 			toggleProjectDisplay("toggleButton1", "contexte1");
 			toggleProjectDisplay("toggleButton2", "contexte2");
 			toggleProjectDisplay("toggleButton3", "contexte3");
+			toggleProjectDisplay2("toggleButton4", "contexte4");
+			toggleProjectDisplay2("toggleButton5", "contexte5");
+			toggleProjectDisplay2("toggleButton6", "contexte6");
 
 		</script>
 
