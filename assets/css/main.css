@@ -1779,6 +1779,7 @@ button:hover {
 .c { width: 60%; background-color: #3498db; }     /* Bleu vif (C) */
 .sql { width: 80%; background-color: #f1c40f; }   /* Jaune lumineux (SQL) */
 .php { width: 80%; background-color: #9b59b6; }   /* Violet profond (PHP) */
+.javascript { width: 60%; background-color: #ff8000; }   /* Orange profond (PHP) */
 
 .label {
 	font-weight: bold;
