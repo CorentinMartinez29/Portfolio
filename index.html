@@ -1,460 +1,554 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Site Corentin Martinez</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<div id="google_translate_element"></div>
+<head>
+	<title>Site Corentin Martinez</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<div id="google_translate_element"></div>
 
-		<script type="text/javascript">
-			function googleTranslateElementInit() {
-				new google.translate.TranslateElement(
-						{ pageLanguage: 'fr' }, // Langue source
-						'google_translate_element'
-				);
-			}
-		</script>
-		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+					{ pageLanguage: 'fr' }, // Langue source
+					'google_translate_element'
+			);
+		}
+	</script>
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-		<style>
+	<style>
 
-		</style>
+	</style>
 
-	</head>
-	<body class="is-preload">
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img src="images/image.jpg" alt="Logo">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Martinez Corentin</h1>
-								<p>Une personne attentive et prête à vous écoutez</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">A propos</a></li>
-								<li><a href="#work">Projets</a></li>
-								<li><a href="#capacites">Capacités</a></li>
-								<li><a href="#portfolioApprentissage">Portfolio d’apprentissage</a></li>
-								<li><a href="#contact">Contact</a></li>
+	<header id="header">
+		<div class="logo">
+			<img src="images/image.jpg" alt="Logo">
+		</div>
+		<div class="content">
+			<div class="inner">
+				<h1>Martinez Corentin</h1>
+				<p>Une personne attentive et prête à vous écouter</p>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#about">A propos</a></li>
+				<li><a href="#work">Projets</a></li>
+				<li><a href="#capacites">Capacités</a></li>
+				<li><a href="#portfolioApprentissage">Portfolio d’apprentissage</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+	<div id="main">
+		<article id="portfolioApprentissage">
+			<h2 class="major">Portfolio d’apprentissage</h2>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Compétences -->
-						<!-- Portfolio d’apprentissage -->
-						<article id="portfolioApprentissage">
-							<h2 class="major">Portfolio d’apprentissage</h2>
+			<section>
+				<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
+				<button id="toggleButton5">Afficher détaille Compétence</button>
+				<div id ="contexte5" style="display: none"><br>
+					<p><strong>Niveau 2</strong> – Déployer des services dans une architecture réseau</p>
 
-							<!-- Compétence 2 -->
-							<section>
-								<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
-								<button id="toggleButton5">Afficher détaille Compétence</button>
-								<div id ="contexte5" style="display: none"><br>
-								<p><strong>Niveau 2</strong> – Déployer des services dans une architecture réseau</p>
-
-								<h4>📌 Composantes essentielles</h4>
-								<ul>
-									<li><strong>CE3.01 :</strong> J’ai mis en place une fonctionnalité de réinitialisation de mot de passe sécurisée, nécessitant une vérification de l’adresse e-mail et un token temporaire. J’ai également utilisé des techniques de sanitization pour empêcher les attaques par injection.</li>
-									<li><strong>CE3.03 :</strong> J’ai veillé à respecter les standards de développement web : utilisation d’une architecture MVC claire, respect des conventions de nommage, structuration des fichiers, validation HTML/CSS, et vérification des entrées côté client et serveur.</li>
-									<li><strong>CE3.02 :</strong> Le site est optimisé pour un affichage rapide en local, avec un code allégé et des requêtes SQL efficaces. Une mise en ligne avec HTTPS est prévue pour garantir rapidité, fiabilité et sécurité.</li>
-									<li><strong>CE3.04 :</strong> En cas d’évolution du projet, tout est documenté : code versionné sur GitHub, branche `main` unique, script Docker pour redéploiement local rapide.</li>
-								</ul>
-
-								<h4>🧠 Apprentissages Critiques</h4>
-								<ul>
-									<li><strong>AC1 :</strong> J’ai intégré un formulaire de contact dynamique en PHP/JS qui envoie des e-mails via la librairie PHPMailer, fonctionnant en local avec un serveur mail simulé.</li>
-									<li><strong>AC2 :</strong> Le serveur web a été déployé en local via Docker, en créant des conteneurs pour Apache, PHP et MySQL. J’ai configuré les ports, les volumes et les services nécessaires à son bon fonctionnement.</li>
-									<li><strong>AC3 :</strong> Les mots de passe sont hachés, les formulaires sont sécurisés côté client et serveur. J’ai prévu le protocole HTTPS et une configuration .htaccess pour limiter l’accès à certaines pages sensibles.</li>
-								</ul>
-								</div>
-							</section>
-
-							<!-- Compétence 3 -->
-							<section>
-								<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
-								<button id="toggleButton6">Afficher détaille Compétence</button>
-								<div id ="contexte6" style="display: none"><br>
-								<p><strong>Niveau 2</strong> – Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
-
-								<h4>📌 Composantes essentielles</h4>
-								<ul>
-									<li><strong>CE4.01 :</strong> Toutes les données sensibles sont protégées : mots de passe hachés, aucune donnée stockée sans consentement, et possibilité de suppression de compte (fonctionnalité à venir).</li>
-									<li><strong>CE4.02 :</strong> La base de données est optimisée pour limiter l’espace disque : peu de redondance, types de données adaptés, hébergement responsable prévu.</li>
-									<li><strong>CE4.03 :</strong> J’ai utilisé la logique relationnelle pour modéliser les entités, créer des relations et garantir l’intégrité des données, en m’appuyant sur la théorie des ensembles.</li>
-									<li><strong>CE4.04 :</strong> Les données sont vérifiées à l’entrée, la base est normalisée (3FN), les clés primaires/étrangères assurent la cohérence et évitent les doublons.</li>
-								</ul>
-
-								<h4>🧠 Apprentissages Critiques</h4>
-								<ul>
-									<li><strong>AC1 :</strong> J’ai réalisé un MCD puis un MPD avec MySQL Workbench, respectant les bonnes pratiques. J’ai structuré les relations produits/commandes/clients de façon optimale.</li>
-									<li><strong>AC2 :</strong> Données sécurisées : hash des mots de passe (SHA-256 ou Bcrypt selon l’environnement), protection XSS et SQLi par vérification des entrées.</li>
-									<li><strong>AC3 :</strong> Les données sont affichées dynamiquement selon les rôles (admin/client). Des requêtes SQL permettent la gestion des utilisateurs et produits.</li>
-								</ul>
-								</div>
-							</section>
-
-							<!-- Compétence 1 -->
-							<section>
-								<h3>🧭 Compétence 5 – Conduire un projet</h3>
-								<button id="toggleButton4">Afficher détaille Compétence</button>
-								<div id ="contexte4" style="display: none"><br>
-									<p><strong>Niveau 2</strong> – Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
-
-									<h4>📌 Composantes essentielles</h4>
-									<ul>
-										<li><strong>CE5.04 :</strong> J’ai su faire preuve d’initiative tout au long du projet. Par exemple, j’ai proposé d’ajouter une fonctionnalité de réinitialisation de mot de passe, qui n’était pas prévue initialement. Cette démarche a été validée par mon tuteur et a renforcé la sécurité du site. J’ai également fait preuve de créativité en suggérant une nouvelle charte graphique, plus moderne, basée sur des nuances de bleu, et d’esprit critique en repensant entièrement le site, que j’ai recommencé de zéro pour mieux répondre aux attentes commerciales.</li>
-										<li><strong>CE5.02 :</strong> J’ai pris en compte les obligations légales, notamment le respect du RGPD pour la gestion des données utilisateurs. Les formulaires contiennent des mentions légales, les données sensibles (comme les mots de passe) sont hachées, et j’ai prévu l’intégration d’une politique de confidentialité lors de la mise en ligne.</li>
-										<li><strong>CE5.01 :</strong> J’ai participé à plusieurs réunions avec la direction commerciale (notamment Camille Rumeau), mon tuteur Michel Sala, et l’équipe de vente pour recueillir les besoins et valider les orientations prises. Ces échanges réguliers m’ont permis de m’assurer que le développement du site était aligné avec les attentes réelles de l’entreprise.</li>
-										<li><strong>CE5.03 :</strong> J’ai conçu le site pour qu’il soit accessible à tous, même aux personnes peu à l’aise avec le numérique (ex. : textes clairs, navigation intuitive). Je me suis aussi assuré que le site soit hébergé sur un serveur éco-responsable prévu dans le cahier des charges, dans une démarche durable.</li>
-									</ul>
-
-									<h4>🧠 Apprentissages Critiques</h4>
-									<ul>
-										<li><strong>AC1 :</strong> Avant de commencer le développement, j’ai analysé les processus internes à La Pêcherie Cettoise : la gestion des commandes, la relation client, les actions commerciales… Cela m’a permis de structurer le futur site vitrine et le module e-commerce en lien avec le fonctionnement réel de l’entreprise.</li>
-										<li><strong>AC2 :</strong> Grâce à plusieurs réunions, j’ai pu dresser un cahier des charges complet listant les attentes du client : valoriser les produits, améliorer l’image de l’entreprise, permettre un futur passage à la vente en ligne. J’ai aussi pris en compte le profil des utilisateurs finaux, principalement des clients fidèles ou des touristes de passage.</li>
-										<li><strong>AC3 :</strong> Avant de démarrer, j’ai analysé mes ressources : temps imparti, outils disponibles (PHPStorm, Docker, GitHub), compétences techniques. J’ai écarté des solutions trop complexes ou irréalistes et privilégié une architecture MVC simple mais efficace, adaptée à mon niveau et au besoin de l’entreprise.</li>
-										<li><strong>AC4 :</strong> J’ai mis en place une méthode agile avec un outil de gestion de tâches (Trello), découpé le projet en sprints (charte graphique, création des pages statiques, développement du backend…), planifié les deadlines, et organisé des réunions régulières pour faire valider les avancées. Cela m’a permis de livrer un travail clair, structuré, et conforme aux objectifs.</li>
-									</ul>
-								</div>
-							</section>
-						</article>
-
-
-
-						<!-- Capacités -->
-						<article id="capacites">
-							<h2 class="major">Capacités</h2>
-							<div>
-								<div class="label">Python</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar python"></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="label">Java</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar java"></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="label">JavaScript</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar javascript"></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="label">C</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar c"></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="label">SQL PLSL</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar sql"></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="label">PHP</div>
-								<div class="progress-bar-container">
-									<div class="progress-bar php"></div>
-								</div>
-							</div>
-						</article>
-
-						<!-- Projects -->
-						<article id="work">
-							<h2 class="major">Projects</h2>
-							<h3>SAE E3SETE – Développement d'un jeu de cartes numérique (octobre 2023 - décembre 2023)</h3>
-							<p style="text-indent: 50px">
-								Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de cartes inventé par mon professeur, en utilisant Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface en ligne de commande, sans nécessiter d'interface graphique.
-							</p>
-							<!-- Bouton pour afficher/masquer le contexte -->
-							<button id="toggleButton1">Afficher Contexte du Projet</button>
-							<div id ="contexte1" style="display: none"><br>
-								<img src="images/ImageE3SETE.png" alt="Contexte SAE Application Web" class="image-adaptable">
-								<p style="text-indent: 50px">
-									<strong>Contexte du projet :</strong><br>
-									L'objectif était de transposer un jeu de cartes sur ordinateur en respectant ses règles et mécaniques, avec des fonctionnalités telles que la gestion des cartes et l'exécution des actions de jeu. La logique du jeu a été implémentée à l'aide d'algorithmes qui géraient les interactions entre les cartes et les actions des joueurs, garantissant ainsi une expérience fluide et cohérente dans un environnement terminal.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Mon rôle et mes responsabilités :</strong><br>
-									J'ai conçu et développé les mécanismes principaux du jeu, incluant la gestion des cartes, l'assignation des actions aux cartes, et la gestion de l'interaction entre les joueurs. J'ai également développé les algorithmes qui ont permis d'exécuter les actions et de gérer l'état du jeu à chaque tour. Mon travail a inclus la création de tests unitaires pour valider le bon fonctionnement de ces mécanismes.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Technologies utilisées :</strong><br>
-									• <u><strong>Java :</strong></u> pour la programmation orientée objet et le développement des mécanismes du jeu.<br>
-									• <u><strong>Terminal</strong></u> : pour interagir avec le jeu sans interface graphique.<br>
-									• <u><strong>Tests unitaires</strong></u> : pour tester les fonctionnalités du jeu et garantir sa stabilité.<br>
-									• <u><strong>Structures de données</strong></u> : pour organiser les cartes et les actions de manière optimale.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Compétences développées :</strong><br>
-									• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour gérer les mécanismes du jeu et les actions des joueurs.<br>
-									• <u><strong>Développement orienté objet</strong></u> : maîtrise de la conception modulaire et structurée du code.<br>
-									• <u><strong>Tests unitaires</strong></u> : mise en place de tests pour assurer la robustesse et la fiabilité du jeu.<br>
-									• <u><strong>Sécurité du code</strong></u> : application des bonnes pratiques pour sécuriser le code.<br>
-									• <u><strong>Gestion de projet</strong></u> : collaboration avec l'équipe pour assurer la bonne organisation du projet.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Principaux enseignements :</strong><br>
-									Ce projet m'a permis de renforcer mes compétences en Java et en développement orienté objet, de maîtriser la gestion des interactions dans un jeu sans interface graphique, et de travailler sur l'assurance qualité grâce à des tests unitaires rigoureux.
-								</p>
-
-							</div>
-							<br><br>
-
-							<h3>SAE  – Jeu de société « TRAINS » (janvier 2024-Juin 2024)</h3>
-							<p style="text-indent: 50px">
-								Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de société en Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface interactive, garantissant ainsi une expérience immersive pour l'utilisateur.
-							</p>
-
-							<!-- Bouton pour afficher/masquer le contexte -->
-							<button id="toggleButton2">Afficher Contexte du Projet </button>
-
-							<div id="contexte2" style="display: none"><br>
-								<img src="images/imageSAETrains.png" alt="Contexte SAE Application Web" class="image-adaptable">
-								<p style="text-indent: 50px">
-									<strong>Contexte du projet :</strong><br>
-									L'objectif était de transposer un jeu de société sur ordinateur tout en respectant ses règles et sa mécanique. Les principales fonctionnalités incluent la gestion des cartes, le placement des rails et l'exécution des actions de jeu. Une modélisation précise des interactions entre cartes, plateau et règles a été essentielle pour garantir une jouabilité fluide.
-								</p>
-
-								<p style="text-indent: 50px">
-									<strong>Mon rôle et mes responsabilités :</strong><br>
-									Mon rôle a consisté à développer les mécanismes essentiels du jeu, y compris la gestion des cartes, le placement des rails et les interactions entre les joueurs. J'ai créé une interface utilisateur intuitive et ergonomique pour faciliter la navigation et la visualisation des actions en temps réel. En parallèle, j'ai conçu des algorithmes pour les actions des cartes, qui influencent le plateau, garantissant ainsi une expérience fluide et cohérente. Enfin, j'ai mis en place des tests unitaires pour vérifier la robustesse du jeu et assurer la fiabilité des fonctionnalités.
-								</p>
-
-								<p style="text-indent: 50px">
-									<strong>Technologies utilisées :</strong><br>
-									• <u><strong>Java</strong></u> : pour le développement des mécanismes du jeu et la programmation orientée objet.<br>
-									• <u><strong>JavaFX</strong></u> : pour créer une interface utilisateur fluide et interactive.<br>
-									• <u><strong>Tests unitaires</strong></u> : pour tester et assurer la fiabilité et la pérennité des fonctionnalités développées.<br>
-									• <u><strong>Structures de données adaptées</strong></u> : pour optimiser la gestion des cartes et des rails sur le plateau.
-								</p>
-
-								<p style="text-indent: 50px">
-									<strong>Compétences développées :</strong><br>
-									• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour la gestion des cartes, du placement des rails et des actions des joueurs.<br>
-									• <u><strong>Qualité et lisibilité du code</strong></u> : respect des bonnes pratiques de développement pour produire un code maintenable.<br>
-									• <u><strong>Développement orienté objet</strong></u> : renforcement de mes compétences en conception modulaire et structurée.<br>
-									• <u><strong>Sécurité du code</strong></u> : application des principes de sécurité pour éviter les failles potentielles.<br>
-									• <u><strong>Ergonomie et accessibilité</strong></u> : mise en place d'une interface intuitive centrée sur l'utilisateur.<br>
-									• <u><strong>Gestion de projet</strong></u> : coordination de l'équipe pour respecter les délais et garantir la cohérence du projet.
-								</p>
-
-								<p style="text-indent: 50px">
-									<strong>Principaux enseignements :</strong><br>
-									Ce projet m'a permis de consolider mes compétences en Java, en développement orienté objet et en conception d'interface utilisateur, tout en renforçant mes aptitudes en tests unitaires et gestion de projet collaboratif.
-								</p>
-							</div><br><br>
-							<!-- SAE – Application Web -->
-							<h3>SAE – Application Web (Septembre 2024 - Janvier 2025)</h3>
-							<p style="text-indent: 50px">
-								Dans le cadre de ce projet, j'ai conçu une application web complète en PHP et SQL pour gérer le suivi académique des étudiants. L'objectif principal était de créer une plateforme capable de gérer les informations liées aux étudiants, leurs résultats, et leur éligibilité à différents programmes universitaires. L'approche Agile a été appliquée tout au long du projet, avec une gestion des tâches via Trello, une base de données modélisée sur Lucid et des sprints réguliers pour affiner et ajuster l'application en fonction des retours des clients.
-							</p>
-							<!-- Bouton pour afficher/masquer le contexte -->
-							<button id="toggleButton3">Afficher Contexte du Projet</button>
-							<div id="contexte3" style="display:none;"><br>
-								<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
-								<p style="text-indent: 50px">
-									<strong>Contexte du projet :</strong>
-									Ce projet visait à fournir une solution de gestion moderne pour le suivi des étudiants. Les utilisateurs peuvent entrer des informations concernant les notes des étudiants et vérifier leur éligibilité pour des programmes particuliers. L'application devait être à la fois fonctionnelle et fluide, facilitant l'accès aux données tout en assurant une gestion efficace et sécurisée. La méthodologie Agile a permis une collaboration étroite avec les clients, garantissant que chaque itération était en phase avec leurs besoins et attentes.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Mon rôle et mes responsabilités :</strong><br>
-									Mon rôle dans ce projet a été très varié et m'a permis de contribuer à différents aspects essentiels du développement de l'application. J'ai conçu et implémenté les données dans la base de données en utilisant PHP et SQL, en veillant à leur cohérence et à l'optimisation des requêtes pour une gestion efficace des données. En parallèle, j'ai participé au développement du back-end en intégrant la logique métier dans les pages dynamiques, tout en améliorant l'ergonomie du front-end à l'aide de technologies telles que HTML, CSS et JavaScript. Mon travail a également inclus l'amélioration de l'interface utilisateur pour garantir une navigation fluide et accessible.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Technologies utilisées :</strong><br>
-									• <u><strong>PHP & SQL</strong></u> : Développement back-end pour la gestion des données et des interactions avec la base de données.<br>
-									• <u><strong>HTML/CSS & JavaScript</strong></u> : Création de pages dynamiques et interactives, en optimisant l'expérience utilisateur.<br>
-									• <u><strong>Trello & Lucid</strong></u> : Outils de gestion de projet (Trello pour organiser les tâches, Lucid pour la création des schémas de la base de données).
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Compétences développées :</strong><br>
-									• Mise en œuvre des exigences des clients.<br>
-									• Création et gestion de bases de données.<br>
-									• Amélioration des compétences en PHP et SQL.<br>
-									• Ergonomie et expérience utilisateur.<br>
-									• Optimisation des requêtes SQL.
-								</p>
-								<p style="text-indent: 50px">
-									<strong>Principaux enseignements :</strong><br>
-									Ce projet m'a permis de consolider mes compétences en développement web, en particulier en PHP et en gestion de bases de données. En travaillant en méthode Agile, j'ai appris à itérer et à améliorer constamment le produit en fonction des retours clients.
-								</p>
-
-
-							</div>
-
-						</article>
-
-
-						<!-- A propos -->
-							<article id="about">
-								<h2 class="major">A propos</h2>
-								<span class="image main"></span>
-								<p style="text-indent: 50px">
-									Je m'appelle Corentin Martinez et je suis étudiant en deuxième année de BUT Informatique à l'IUT Montpellier-Sète. Passionné par l'informatique depuis toujours, j'ai choisi de me
-									spécialiser dans ce domaine pour approfondir mes connaissances et découvrir de nouvelles technologies. Je suis également très passionné par l’esport, une discipline qui me permet
-									de combiner compétitivité et travail d’équipe, deux éléments qui me motivent au quotidien.
-								</p>
-								<p style="text-indent: 50px">
-									Je suis une personne curieuse et déterminée, toujours prête à apprendre et à relever de nouveaux défis.
-									Tout au long de mes études, j'ai eu l'opportunité de travailler sur des projets variés, ce qui m’a permis d’acquérir des compétences en développement, en gestion de
-									bases de données et dans le domaine des technologies DevOps. Ces projets m'ont permis de mieux comprendre le monde du travail et de développer ma capacité à travailler en équipe
-									tout en restant autonome.
-								</p><br>
-
-								<h3>Éducation :</h3>
-								<ul>
-									<li>BUT Informatique, IUT Montpellier-Sète (2023-2026)</li>
-									<li>Baccalauréat général, spécialité Mathématiques et Sciences Numériques et de l'Informatique (2022)</li>
-								</ul>
-
-								<p>
-								<h3>Centre d'intérêts:</h3> esport, jeux vidéos, construction d'ordinateurs, music, programmation.
-								</p>
-
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Nom</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Envoyer" class="primary" /></li>
-										<li><input type="reset" value="Annuler" /></li>
-									</ul>
-								</form>
-							</article>
-
-
-
-
-
-					</div>
-
-				<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="https://github.com/Cocodingo297?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="PDF/CV-Martinez-Corentin.pdf" class="CV"><span class="label">CV</span></a></li>
-						<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
-
+					<h4>📌 Composantes essentielles</h4>
+					<ul>
+						<li><strong>CE3.01 :</strong> J’ai mis en place une fonctionnalité de réinitialisation de mot de passe sécurisée, nécessitant une vérification de l’adresse e-mail et un token temporaire. J’ai également utilisé des techniques de sanitization pour empêcher les attaques par injection.</li>
+						<li><strong>CE3.03 :</strong> J’ai veillé à respecter les standards de développement web : utilisation d’une architecture MVC claire, respect des conventions de nommage, structuration des fichiers, validation HTML/CSS, et vérification des entrées côté client et serveur.</li>
+						<li><strong>CE3.02 :</strong> Le site est optimisé pour un affichage rapide en local, avec un code allégé et des requêtes SQL efficaces. Une mise en ligne avec HTTPS est prévue pour garantir rapidité, fiabilité et sécurité.</li>
+						<li><strong>CE3.04 :</strong> En cas d’évolution du projet, tout est documenté : code versionné sur GitHub, branche `main` unique, script Docker pour redéploiement local rapide.</li>
 					</ul>
-				</footer>
+
+					<h4>🧠 Apprentissages Critiques</h4>
+					<ul>
+						<li><strong>AC1 :</strong> J’ai intégré un formulaire de contact dynamique en PHP/JS qui envoie des e-mails via la librairie PHPMailer, fonctionnant en local avec un serveur mail simulé.</li>
+						<li><strong>AC2 :</strong> Le serveur web a été déployé en local via Docker, en créant des conteneurs pour Apache, PHP et MySQL. J’ai configuré les ports, les volumes et les services nécessaires à son bon fonctionnement.</li>
+						<li><strong>AC3 :</strong> Les mots de passe sont hachés, les formulaires sont sécurisés côté client et serveur. J’ai prévu le protocole HTTPS et une configuration .htaccess pour limiter l’accès à certaines pages sensibles.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
+				<button id="toggleButton6">Afficher détaille Compétence</button>
+				<div id ="contexte6" style="display: none"><br>
+					<p><strong>Niveau 2</strong> – Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</p>
+
+					<h4>📌 Composantes essentielles</h4>
+					<ul>
+						<li><strong>CE4.01 :</strong> Toutes les données sensibles sont protégées : mots de passe hachés, aucune donnée stockée sans consentement, et possibilité de suppression de compte (fonctionnalité à venir).</li>
+						<li><strong>CE4.02 :</strong> La base de données est optimisée pour limiter l’espace disque : peu de redondance, types de données adaptés, hébergement responsable prévu.</li>
+						<li><strong>CE4.03 :</strong> J’ai utilisé la logique relationnelle pour modéliser les entités, créer des relations et garantir l’intégrité des données, en m’appuyant sur la théorie des ensembles.</li>
+						<li><strong>CE4.04 :</strong> Les données sont vérifiées à l’entrée, la base est normalisée (3FN), les clés primaires/étrangères assurent la cohérence et évitent les doublons.</li>
+					</ul>
+
+					<h4>🧠 Apprentissages Critiques</h4>
+					<ul>
+						<li><strong>AC1 :</strong> J’ai réalisé un MCD puis un MPD avec MySQL Workbench, respectant les bonnes pratiques. J’ai structuré les relations produits/commandes/clients de façon optimale.</li>
+						<li><strong>AC2 :</strong> Données sécurisées : hash des mots de passe (SHA-256 ou Bcrypt selon l’environnement), protection XSS et SQLi par vérification des entrées.</li>
+						<li><strong>AC3 :</strong> Les données sont affichées dynamiquement selon les rôles (admin/client). Des requêtes SQL permettent la gestion des utilisateurs et produits.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h3>🧭 Compétence 5 – Conduire un projet</h3>
+				<button id="toggleButton4">Afficher détaille Compétence</button>
+				<div id ="contexte4" style="display: none"><br>
+					<p><strong>Niveau 2</strong> – Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
+
+					<h4>📌 Composantes essentielles</h4>
+					<ul>
+						<li><strong>CE5.04 :</strong> J’ai su faire preuve d’initiative tout au long du projet. Par exemple, j’ai proposé d’ajouter une fonctionnalité de réinitialisation de mot de passe, qui n’était pas prévue initialement. Cette démarche a été validée par mon tuteur et a renforcé la sécurité du site. J’ai également fait preuve de créativité en suggérant une nouvelle charte graphique, plus moderne, basée sur des nuances de bleu, et d’esprit critique en repensant entièrement le site, que j’ai recommencé de zéro pour mieux répondre aux attentes commerciales.</li>
+						<li><strong>CE5.02 :</strong> J’ai pris en compte les obligations légales, notamment le respect du RGPD pour la gestion des données utilisateurs. Les formulaires contiennent des mentions légales, les données sensibles (comme les mots de passe) sont hachées, et j’ai prévu l’intégration d’une politique de confidentialité lors de la mise en ligne.</li>
+						<li><strong>CE5.01 :</strong> J’ai participé à plusieurs réunions avec la direction commerciale, mon tuteur, et l’équipe de vente pour recueillir les besoins et valider les orientations prises. Ces échanges réguliers m’ont permis de m’assurer que le développement du site était aligné avec les attentes réelles de l’entreprise.</li>
+						<li><strong>CE5.03 :</strong> J’ai conçu le site pour qu’il soit accessible à tous, même aux personnes peu à l’aise avec le numérique (ex. : textes clairs, navigation intuitive). Je me suis aussi assuré que le site soit hébergé sur un serveur éco-responsable prévu dans le cahier des charges, dans une démarche durable.</li>
+					</ul>
+
+					<h4>🧠 Apprentissages Critiques</h4>
+					<ul>
+						<li><strong>AC1 :</strong> Avant de commencer le développement, j’ai analysé les processus internes à l'entreprise : la gestion des commandes, la relation client, les actions commerciales… Cela m’a permis de structurer le futur site vitrine et le module e-commerce en lien avec le fonctionnement réel de l’entreprise.</li>
+						<li><strong>AC2 :</strong> Grâce à plusieurs réunions, j’ai pu dresser un cahier des charges complet listant les attentes du client. J’ai aussi pris en compte le profil des utilisateurs finaux, principalement des clients fidèles ou des touristes de passage.</li>
+						<li><strong>AC3 :</strong> Avant de démarrer, j’ai analysé mes ressources : temps imparti, outils disponibles (PHPStorm, Docker, GitHub), compétences techniques. J’ai écarté des solutions trop complexes ou irréalistes et privilégié une architecture MVC simple mais efficace.</li>
+						<li><strong>AC4 :</strong> J’ai mis en place une méthode agile avec un outil de gestion de tâches (Trello), découpé le projet en sprints, planifié les deadlines, et organisé des réunions régulières pour faire valider les avancées. Cela m’a permis de livrer un travail clair, structuré, et conforme aux objectifs.</li>
+					</ul>
+				</div>
+			</section>
+		</article>
 
 
+
+		<article id="capacites">
+			<h2 class="major">Capacités Techniques</h2>
+
+			<div>
+				<div class="label">Python</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar python"></div>
+				</div>
 			</div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+			<div>
+				<div class="label">C</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar c"></div>
+				</div>
+			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				const copyEmailButtons = document.querySelectorAll('.copy-email');
-				copyEmailButtons.forEach(button => {
-					button.addEventListener('click', () => {
-						const email = button.getAttribute('data-email');
-						if (email) {
-							navigator.clipboard.writeText(email)
-									.then(() => {
-										alert('Email copié dans le presse-papier : ' + email);
-									})
-									.catch(err => {
-										alert('Impossible de copier l\'email : ' + err);
-									});
-						}
-					});
-				});
+			<div>
+				<div class="label">Java / JavaFX</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar java"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="label">JavaScript / Vue.js</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar javascript"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="label">PHP / Symfony (API Platform)</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar php"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="label">SQL / PLSQL (MySQL / PostgreSQL)</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar sql"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="label">HTML5 / CSS3 / Twig</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar html"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="label">DevOps (Docker, Git, CI/CD)</div>
+				<div class="progress-bar-container">
+					<div class="progress-bar devops"></div>
+				</div>
+			</div>
+		</article>
+
+		<article id="work">
+			<h2 class="major">Projets</h2>
+
+			<h3>SAE E3SETE – Développement d'un jeu de cartes numérique (Octobre 2023 - Décembre 2023)</h3>
+			<img src="images/ImageE3SETE.png" alt="Contexte SAE Jeu de cartes" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de cartes inventé par mon professeur, en utilisant Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface en ligne de commande, sans nécessiter d'interface graphique.
+			</p>
+			<button id="toggleButton1">Afficher Contexte du Projet</button>
+			<div id ="contexte1" style="display: none"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong><br>
+					L'objectif était de transposer un jeu de cartes sur ordinateur en respectant ses règles et mécaniques, avec des fonctionnalités telles que la gestion des cartes et l'exécution des actions de jeu. La logique du jeu a été implémentée à l'aide d'algorithmes qui géraient les interactions entre les cartes et les actions des joueurs.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					J'ai conçu et développé les mécanismes principaux du jeu, incluant la gestion des cartes, l'assignation des actions aux cartes, et la gestion de l'interaction entre les joueurs. J'ai également développé les algorithmes qui ont permis d'exécuter les actions et de gérer l'état du jeu à chaque tour.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>Java :</strong></u> pour la programmation orientée objet et le développement des mécanismes du jeu.<br>
+					• <u><strong>Terminal</strong></u> : pour interagir avec le jeu sans interface graphique.<br>
+					• <u><strong>Tests unitaires</strong></u> : pour tester les fonctionnalités du jeu et garantir sa stabilité.<br>
+					• <u><strong>Structures de données</strong></u> : pour organiser les cartes et les actions de manière optimale.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour gérer les mécanismes du jeu.<br>
+					• <u><strong>Développement orienté objet</strong></u> : maîtrise de la conception modulaire.<br>
+					• <u><strong>Tests unitaires</strong></u> : mise en place de tests pour assurer la robustesse.<br>
+					• <u><strong>Gestion de projet</strong></u> : collaboration avec l'équipe.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					Ce projet m'a permis de renforcer mes compétences en Java et en développement orienté objet, de maîtriser la gestion des interactions dans un jeu sans interface graphique, et de travailler sur l'assurance qualité.
+				</p>
+			</div>
+			<br><br>
+
+			<h3>SAE – Jeu de société « TRAINS » (Janvier 2024 - Juin 2024)</h3>
+			<img src="images/imageSAETrains.png" alt="Contexte SAE Trains" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de société en Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface interactive.
+			</p>
+			<button id="toggleButton2">Afficher Contexte du Projet</button>
+			<div id="contexte2" style="display: none"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong><br>
+					L'objectif était de transposer un jeu de société sur ordinateur tout en respectant ses règles et sa mécanique. Les principales fonctionnalités incluent la gestion des cartes, le placement des rails et l'exécution des actions de jeu.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					Mon rôle a consisté à développer les mécanismes essentiels du jeu, y compris la gestion des cartes, le placement des rails et les interactions entre les joueurs. J'ai créé une interface utilisateur intuitive et ergonomique pour faciliter la navigation et la visualisation des actions en temps réel.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>Java</strong></u> : pour le développement des mécanismes du jeu.<br>
+					• <u><strong>JavaFX</strong></u> : pour créer une interface utilisateur fluide et interactive.<br>
+					• <u><strong>Tests unitaires</strong></u> : pour assurer la fiabilité des fonctionnalités.<br>
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour la gestion des cartes et du plateau.<br>
+					• <u><strong>Qualité et lisibilité du code</strong></u> : respect des bonnes pratiques.<br>
+					• <u><strong>Ergonomie</strong></u> : mise en place d'une interface intuitive.<br>
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					Ce projet m'a permis de consolider mes compétences en Java, en développement orienté objet et en conception d'interface utilisateur.
+				</p>
+			</div>
+			<br><br>
+
+			<h3>SAE – Application Web (Septembre 2024 - Janvier 2025)</h3>
+			<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Dans le cadre de ce projet, j'ai conçu une application web complète en PHP et SQL pour gérer le suivi académique des étudiants. L'objectif principal était de créer une plateforme capable de gérer les informations liées aux étudiants, leurs résultats, et leur éligibilité à différents programmes universitaires.
+			</p>
+			<button id="toggleButton3">Afficher Contexte du Projet</button>
+			<div id="contexte3" style="display:none;"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong>
+					Ce projet visait à fournir une solution de gestion moderne pour le suivi des étudiants. Les utilisateurs peuvent entrer des informations concernant les notes des étudiants et vérifier leur éligibilité pour des programmes particuliers. La méthodologie Agile a permis une collaboration étroite avec les clients.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					Mon rôle dans ce projet a été très varié. J'ai conçu et implémenté les données dans la base de données en utilisant PHP et SQL. En parallèle, j'ai participé au développement du back-end en intégrant la logique métier, tout en améliorant l'ergonomie du front-end à l'aide de HTML, CSS et JavaScript.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>PHP & SQL</strong></u> : Développement back-end.<br>
+					• <u><strong>HTML/CSS & JavaScript</strong></u> : Création de pages dynamiques et interactives.<br>
+					• <u><strong>Trello & Lucid</strong></u> : Outils de gestion de projet.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• Mise en œuvre des exigences des clients.<br>
+					• Création et gestion de bases de données.<br>
+					• Amélioration des compétences en PHP et SQL.<br>
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					Ce projet m'a permis de consolider mes compétences en développement web et en gestion de bases de données.
+				</p>
+			</div>
+			<br><br>
+
+			<h3>SAE – Application Météo Nautique (Septembre 2025 - Octobre 2025)</h3>
+			<img src="images/imageSAEMeteo.png" alt="Contexte SAE Météo" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Dans le cadre de cette SAE, nous avons développé une application web destinée aux amateurs de sports nautiques, permettant de consulter les conditions météorologiques en temps réel. J'ai été responsable de la pièce maîtresse de l'application : la carte interactive.
+			</p>
+			<button id="toggleButton7">Afficher Contexte du Projet</button>
+			<div id="contexte7" style="display:none;"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong><br>
+					Le projet visait à répondre au besoin des sportifs nautiques de connaître précisément les conditions (vent, houle, température) avant une sortie. Le développement a suivi la méthode Scrum. L'application devait agréger des données de différentes sources et modèles de prévision.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					Je me suis chargé de la conception et de l'intégration de la carte météorologique interactive. J'ai implémenté la visualisation en direct des couches de données (vent, pluie, température) sur la carte. J'ai également développé l'interactivité permettant d'afficher toutes les stations météo mondiales.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>JavaScript (Framework cartographique)</strong></u> : Pour la gestion de la carte interactive.<br>
+					• <u><strong>API REST</strong></u> : Consommation de services web pour récupérer les données météo.<br>
+					• <u><strong>Docker</strong></u> : Pour la conteneurisation.<br>
+					• <u><strong>Gitlab CI/CD</strong></u> : Pour l'intégration continue.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• Manipulation et visualisation de données géographiques.<br>
+					• Consommation d'API tierces complexes.<br>
+					• Travail en méthode Agile (Scrum).<br>
+					• Gestion de l'interactivité front-end avancée.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					Ce projet m'a appris à gérer des flux de données importants et à les rendre intelligibles visuellement pour l'utilisateur.
+				</p>
+			</div>
+			<br><br>
+
+			<h3>Projet – My Avatar (Service centralisé d'avatars) (Octobre 2025)</h3>
+			<img src="images/imageSAEAvatar.png" alt="Contexte Projet Avatar" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Ce projet consistait à développer un clone du service Gravatar, permettant de centraliser la gestion des photos de profil via une adresse email. J'ai travaillé principalement sur l'architecture backend et la sécurité.
+			</p>
+			<button id="toggleButton8">Afficher Contexte du Projet</button>
+			<div id="contexte8" style="display:none;"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong><br>
+					L'objectif était de créer une application web en "server-side rendering" avec Symfony capable de servir des avatars à partir du hachage (SHA256) d'une adresse email. L'application devait permettre l'inscription, la gestion de profil et la sécurisation des données.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					J'ai été responsable de l'architecture de la base de données, garantissant une structure solide. J'ai géré la sécurité des accès, notamment la gestion des mots de passe (hachage). J'ai également intégré le serveur SMTP de Google pour la gestion des emails.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>Symfony & Twig</strong></u> : Pour le développement backend et le rendu des vues.<br>
+					• <u><strong>SQL (MySQL/MariaDB)</strong></u> : Pour la persistance des données.<br>
+					• <u><strong>SMTP Google</strong></u> : Pour l'envoi d'emails depuis l'application.<br>
+					• <u><strong>CSS</strong></u> : Pour la mise en forme et le design.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• Conception et architecture de base de données relationnelle.<br>
+					• Sécurisation d'une application Symfony.<br>
+					• Intégration de services tiers (Emailing).<br>
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					J'ai approfondi ma maîtrise du framework Symfony et des bonnes pratiques de sécurité web.
+				</p>
+			</div>
+			<br><br>
+
+			<h3>SAE – Site de Critiques Full Stack (Novembre 2025 - Janvier 2026)</h3>
+			<img src="images/imageToilette.png" alt="Contexte Projet Critiques" class="image-adaptable">
+			<p style="text-indent: 50px">
+				Pour ce projet de fin de semestre, nous avons réalisé une architecture complète séparant le Back-end (API) et le Front-end (Client). Nous avons créé une plateforme de critiques communautaire.
+			</p>
+			<button id="toggleButton9">Afficher Contexte du Projet</button>
+			<div id="contexte9" style="display:none;"><br>
+				<p style="text-indent: 50px">
+					<strong>Contexte du projet :</strong><br>
+					Le projet nécessitait la création d'une API REST robuste avec Symfony/API Platform et d'une interface client réactive en Vue.js. L'objectif était de permettre aux utilisateurs de consulter, noter et critiquer des œuvres.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Mon rôle et mes responsabilités :</strong><br>
+					Je me suis chargé de toute la partie Gestion du Profil Utilisateur côté client. J'ai développé les interfaces et la logique permettant à un utilisateur connecté de retrouver ses informations personnelles ainsi que l'historique de ses avis. J'ai implémenté la modification, la suppression de compte et la déconnexion.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Technologies utilisées :</strong><br>
+					• <u><strong>Vue.js</strong></u> : Pour le développement de l'interface utilisateur réactive.<br>
+					• <u><strong>Symfony (API Platform)</strong></u> : Pour le backend et la gestion des données.<br>
+					• <u><strong>JWT</strong></u> : Pour la gestion de l'authentification.<br>
+					• <u><strong>Axios</strong></u> : Pour les requêtes HTTP asynchrones.
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Compétences développées :</strong><br>
+					• Communication Client-Serveur.<br>
+					• Gestion de l'état utilisateur (Session, Token).<br>
+					• Développement de composants Vue.js réutilisables.<br>
+				</p>
+				<p style="text-indent: 50px">
+					<strong>Principaux enseignements :</strong><br>
+					Ce projet m'a permis de comprendre concrètement l'architecture "Headless" (API séparée du Front).
+				</p>
+			</div>
+
+		</article>
+
+
+		<article id="about">
+			<h2 class="major">A propos</h2>
+			<span class="image main"></span>
+			<p style="text-indent: 50px">
+				Bonjour, je m'appelle Corentin Martinez et je suis actuellement étudiant en troisième année de BUT Informatique à l'IUT Montpellier-Sète. Afin d'élargir mes compétences au-delà de la technique, je prépare en
+				parallèle une double licence en Management, Technologies et Sciences. Naturellement curieux et déterminé, je suis un grand passionné d'esport. En tant que spectateur, j'analyse avec intérêt les stratégies
+				collectives et la mécanique de la compétition à haut niveau, ce qui nourrit ma vision du travail d'équipe.
+			</p>
+			<p style="text-indent: 50px">
+				Mes expériences académiques et mes projets variés m'ont permis d'acquérir une solide autonomie en développement et en gestion de bases de données. Concernant mon avenir post-BUT, mon projet professionnel
+				s'articule autour de deux axes : m'orienter vers le management des systèmes d'information pour exploiter ma double compétence, ou poursuivre en Master spécialisé en cybersécurité afin de répondre aux enjeux
+				critiques de la protection des données numériques.
+			</p><br>
+
+			<h3>Éducation :</h3>
+			<ul>
+				<li>BUT Informatique, IUT Montpellier-Sète (2023-2026)</li>
+				<li>Double Licence Management, Technologies et Sciences (2025-2026)</li>
+				<li>Baccalauréat général, spécialité Mathématiques et Sciences Numériques et de l'Informatique (2022)</li>
+			</ul>
+
+			<p>
+			<h3>Centre d'intérêts:</h3>
+			Sport : Pratique du Padel et du Badminton.<br>
+
+			Esport : Suivi de les compétitive d'esport.<br>
+
+			Hardware : Montage et construction d'ordinateurs.<br>
+
+			Culture : Musique, Cinéma et programmation.
+			</p>
+
+		</article>
+
+		<article id="contact">
+			<h2 class="major">Contact</h2>
+			<form method="post" action="#">
+				<div class="fields">
+					<div class="field half">
+						<label for="name">Nom</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field half">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="4"></textarea>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Envoyer" class="primary" /></li>
+					<li><input type="reset" value="Annuler" /></li>
+				</ul>
+			</form>
+		</article>
+
+
+
+
+
+	</div>
+
+	<footer id="footer">
+		<ul class="icons">
+			<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+			<li><a href="https://github.com/Cocodingo297?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			<li><a href="PDF/CV-Martinez-Corentin.pdf" class="CV"><span class="label">CV</span></a></li>
+			<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+
+		</ul>
+	</footer>
+
+
+</div>
+
+<div id="bg"></div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const copyEmailButtons = document.querySelectorAll('.copy-email');
+		copyEmailButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const email = button.getAttribute('data-email');
+				if (email) {
+					navigator.clipboard.writeText(email)
+							.then(() => {
+								alert('Email copié dans le presse-papier : ' + email);
+							})
+							.catch(err => {
+								alert('Impossible de copier l\'email : ' + err);
+							});
+				}
 			});
+		});
+	});
 
 
-			// Fonction pour basculer l'affichage du contenu
-			function toggleProjectDisplay(buttonId, contextId) {
-				document.getElementById(buttonId).addEventListener("click", function() {
-					var contexte = document.getElementById(contextId);
-					if (contexte.style.display === "none") {
-						contexte.style.display = "block";  // Afficher le contenu
-						this.textContent = "Cacher Contenu du Projet"; // Changer le texte du bouton
-					} else {
-						contexte.style.display = "none";  // Cacher le contenu
-						this.textContent = "Afficher Contexte du Projet"; // Réinitialiser le texte du bouton
-					}
-				});
+	// Fonction pour basculer l'affichage du contenu
+	function toggleProjectDisplay(buttonId, contextId) {
+		document.getElementById(buttonId).addEventListener("click", function() {
+			var contexte = document.getElementById(contextId);
+			if (contexte.style.display === "none") {
+				contexte.style.display = "block";  // Afficher le contenu
+				this.textContent = "Cacher Contenu du Projet"; // Changer le texte du bouton
+			} else {
+				contexte.style.display = "none";  // Cacher le contenu
+				this.textContent = "Afficher Contexte du Projet"; // Réinitialiser le texte du bouton
 			}
+		});
+	}
 
-			// Fonction pour basculer l'affichage du contenu
-			function toggleProjectDisplay2(buttonId, contextId) {
-				document.getElementById(buttonId).addEventListener("click", function() {
-					var contexte = document.getElementById(contextId);
-					if (contexte.style.display === "none") {
-						contexte.style.display = "block";  // Afficher le contenu
-						this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
-					} else {
-						contexte.style.display = "none";  // Cacher le contenu
-						this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
-					}
-				});
+	// Fonction pour basculer l'affichage du contenu
+	function toggleProjectDisplay2(buttonId, contextId) {
+		document.getElementById(buttonId).addEventListener("click", function() {
+			var contexte = document.getElementById(contextId);
+			if (contexte.style.display === "none") {
+				contexte.style.display = "block";  // Afficher le contenu
+				this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
+			} else {
+				contexte.style.display = "none";  // Cacher le contenu
+				this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
 			}
+		});
+	}
 
 
 
-			// Appliquer la fonction à chaque bouton pour les deux projets
-			toggleProjectDisplay("toggleButton1", "contexte1");
-			toggleProjectDisplay("toggleButton2", "contexte2");
-			toggleProjectDisplay("toggleButton3", "contexte3");
-			toggleProjectDisplay2("toggleButton4", "contexte4");
-			toggleProjectDisplay2("toggleButton5", "contexte5");
-			toggleProjectDisplay2("toggleButton6", "contexte6");
+	// Appliquer la fonction à chaque bouton pour les deux projets
+	toggleProjectDisplay("toggleButton1", "contexte1");
+	toggleProjectDisplay("toggleButton2", "contexte2");
+	toggleProjectDisplay("toggleButton3", "contexte3");
+	toggleProjectDisplay2("toggleButton4", "contexte4");
+	toggleProjectDisplay2("toggleButton5", "contexte5");
+	toggleProjectDisplay2("toggleButton6", "contexte6");
 
-		</script>
+	// Nouveaux projets ajoutés
+	toggleProjectDisplay("toggleButton7", "contexte7"); // Météo
+	toggleProjectDisplay("toggleButton8", "contexte8"); // Avatar
+	toggleProjectDisplay("toggleButton9", "contexte9"); // Critiques
+
+</script>
 
 
-	</body>
+</body>
 </html>
