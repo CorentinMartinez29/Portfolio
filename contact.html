@@ -45,7 +45,13 @@
 					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" class="active-page-link" style="border-bottom:none">Contact</a></nav>
 
 								
-			<form action="https://formspree.io/f/xvgozkaw" method="POST">
+			<form action="https://formsubmit.co/corentin.martinez01@etu.umontpellier.fr" method="POST">
+				<!-- Redirection après envoi (optionnelle, renvoie à l'accueil du portfolio) -->
+				<input type="hidden" name="_next" value="https://corentinmartinez29.github.io/Portfolio/contact.html">
+
+				<!-- Désactive le captcha par sécurité/fluidité -->
+				<input type="hidden" name="_captcha" value="false">
+
 				<div class="fields">
 					<div class="field half">
 						<label for="name">Nom</label>
@@ -53,16 +59,15 @@
 					</div>
 					<div class="field half">
 						<label for="email">Email</label>
-						<input type="email" name="_replyto" id="email" required />
+						<input type="email" name="email" id="email" required />
 					</div>
 					<div class="field">
 						<label for="message">Message</label>
 						<textarea name="message" id="message" rows="4" required></textarea>
 					</div>
-					<!-- Honeypot to prevent spam -->
-					<input type="text" name="_gotcha" style="display:none" />
+					<!-- Honeypot inutile avec formsubmit, mais gardé pour correspondre à formsubmit si besoin, formsubmit a sa propre sécurité -->
 				</div>
-				<ul class="actions">
+				<ul class="actions" style="margin-top: 20px;">
 					<li><input type="submit" value="Envoyer" class="primary" /></li>
 					<li><input type="reset" value="Annuler" /></li>
 				</ul>
