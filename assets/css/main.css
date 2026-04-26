@@ -957,9 +957,7 @@ input, select, textarea {
 				}
 
 
-a:hover {
-	background-color: black;
-	color: black;
+a:hover { background-color: rgba(255, 255, 255, 0.05); color: #ffffff; 
 	transform: scale(1.1);
 	font-weight: bold; /* Texte en gras au survol */
 }
@@ -1205,26 +1203,46 @@ button:hover {
 	right: 10px;
 	z-index: 1000;
 }
-
 /* Styles pour le sélecteur */
 #google_translate_element select {
-	color: black; /* Texte noir */
-	border: 1px solid black; /* Bordure noire */
-	padding: 5px;
-	border-radius: 5px;
-	appearance: none; /* Supprime l'apparence par défaut */
+	color: white; 
+	background-color: #1b1f22; /* Solid dark background to fix readability over bright gradients */
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 8px 30px 8px 15px;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	font-family: inherit;
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
 	background-repeat: no-repeat;
 	background-position: right 10px center;
-	background-size: 10px;
+	background-size: 12px;
+}
+#google_translate_element select:hover {
+	background-color: #2c3237;
+	border-color: rgba(255, 255, 255, 0.6);
+}
+#google_translate_element select option {
+	background-color: #1b1f22;
+	color: white;
 }
 
 /* Conteneur interne (parfois injecté par Google) */
 .goog-te-gadget {
 	margin: 0 !important;
 	padding: 0 !important;
+	color: transparent !important;
+	font-size: 0 !important;
+}
+.goog-te-gadget a, 
+.goog-te-gadget > span > a, 
+.goog-logo-link {
+	display: none !important;
 }
 
 
@@ -1425,6 +1443,8 @@ button:hover {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
+			flex-wrap: nowrap;
+			white-space: nowrap;
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
@@ -1443,12 +1463,12 @@ button:hover {
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
+					min-width: 6.2rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					padding: 0 0.8rem;
 					text-transform: uppercase;
-					letter-spacing: 0.2rem;
+					letter-spacing: 0.1rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
 				}
@@ -1814,3 +1834,9 @@ button:hover {
 
 
 
+
+.article-nav a { padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.2s ease-in-out; }
+.article-nav a:hover { background-color: rgba(255, 255, 255, 0.8) !important; transform: scale(1.05); color: #000000 !important; font-weight: bold; text-decoration: none; border-bottom: none !important; }
+
+
+#header nav ul li a:hover { background-color: rgba(255, 255, 255, 0.075) !important; color: #000000 !important; font-weight: bold !important; }

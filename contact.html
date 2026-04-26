@@ -37,11 +37,37 @@
 				<p>Une personne attentive et prête à vous écouter</p>
 			</div>
 		</div>
-		<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Portfolio</a></li><li><a href="contact.html#contact">Contact</a></li></ul></nav>
+<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Portfolio</a></li><li><a href="contact.html#contact" class="active-page-link">Contact</a></li></ul></nav>
 	</header>
 
 	<div id="main">
-		<!-- Les articles sont maintenant dans des fichiers s�par�s -->
+		<article id="contact">
+					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" class="active-page-link" style="border-bottom:none">Contact</a></nav>
+
+								
+			<form action="https://formspree.io/f/xvgozkaw" method="POST">
+				<div class="fields">
+					<div class="field half">
+						<label for="name">Nom</label>
+						<input type="text" name="name" id="name" required />
+					</div>
+					<div class="field half">
+						<label for="email">Email</label>
+						<input type="email" name="_replyto" id="email" required />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="4" required></textarea>
+					</div>
+					<!-- Honeypot to prevent spam -->
+					<input type="text" name="_gotcha" style="display:none" />
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Envoyer" class="primary" /></li>
+					<li><input type="reset" value="Annuler" /></li>
+				</ul>
+			</form>
+		</article>
 	</div>
 
 	<footer id="footer">

@@ -223,7 +223,7 @@
 
 							// Hide article, main.
 								$article.hide();
-								$main.hide();
+								// $main.hide();
 
 							// Show footer, header.
 								$footer.show();
@@ -258,7 +258,7 @@
 
 						// Hide article, main.
 							$article.hide();
-							$main.hide();
+							// $main.hide();
 
 						// Show footer, header.
 							$footer.show();
@@ -292,7 +292,7 @@
 				var $this = $(this);
 
 				// Close.
-					$('<div class="close">Close</div>')
+					$('<div class="close" style="display:none;">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
 							location.hash = '';
@@ -309,8 +309,8 @@
 			$body.on('click', function(event) {
 
 				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
-						$main._hide(true);
+				//	if ($body.hasClass('is-article-visible'))
+				//		$main._hide(true);
 
 			});
 
@@ -388,8 +388,8 @@
 		// Initialize.
 
 			// Hide main, articles.
-				$main.hide();
-				$main_articles.hide();
+				// $main.hide();
+				// $main_articles.hide();
 
 			// Initial article.
 				if (location.hash != ''

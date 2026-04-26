@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Site Corentin Martinez</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<div id="google_translate_element"></div>
+
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+					{ pageLanguage: 'fr' },
+					'google_translate_element'
+			);
+		}
+	</script>
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	<style>
+		/* Styles pour garantir que les boutons ne cassent pas */
+		.project-actions button, 
+		button[id^="toggleButton"] {
+			white-space: normal !important;
+			height: auto !important;
+			min-height: 2.75rem;
+			padding: 0.5rem 1rem !important;
+			line-height: 1.2 !important;
+		}
+	</style>
+
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+
+	<header id="header">
+		<div class="logo">
+			<img src="images/image.jpg" alt="Logo">
+		</div>
+		<div class="content">
+			<div class="inner">
+				<h1>Martinez Corentin</h1>
+				<p>Une personne attentive et prête à vous écouter</p>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="apropos.html#about">A propos</a></li>
+				<li><a href="projets.html#work">Projets</a></li>
+				<li><a href="capacites.html#capacites">Capacités</a></li>
+				<li><a href="portfolio.html#portfolioApprentissage" class="active-page-link">Portfolio</a></li>
+				<li><a href="contact.html#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="main">
+		<article id="portfolioApprentissage">
+					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" class="active-page-link" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" style="border-bottom:none">Contact</a></nav>
+
+			<section>
+				<h3>💻 Compétence 1 – Réaliser un développement d'application</h3>
+				<button id="toggleButton1">Afficher détaille Compétence</button>
+				<div id ="contexte1" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Dans le cadre de ma formation universitaire, j'ai eu l'occasion de mener de bout en bout des projets de développement, en partant de l'analyse du besoin jusqu'à la livraison. J’ai appris à structurer mon code de manière professionnelle, notamment en appliquant le modèle MVC (Modèle-Vue-Contrôleur) pour mes projets web. Cette approche m'a permis de bien séparer la logique métier de l'interface visuelle, rendant mon code beaucoup plus facile à maintenir et à faire évoluer au fil des semestres.
+					</p>
+					<p style="text-indent: 50px">
+						J'ai également accordé une grande importance à la qualité de l'interface utilisateur. Que ce soit pour un site vitrine ou une application interactive, j'ai veillé à construire des pages ergonomiques. Parallèlement, pour fiabiliser le code et éviter que de nouvelles modifications ne "cassent" le fonctionnement existant, je me suis exercé à mettre en place des tests unitaires, donnant une base solide et réutilisable à mes projets.
+					</p>
+					<p style="text-indent: 50px">
+						Enfin, j'ai toujours eu à cœur de comprendre finalité fonctionnelle de chaque outil que je code. Que ce soit en Java pour scripter un moteur de jeu ou en PHP pour un module d'inscription, j'ai su adapter le choix des technologies tout en documentant ma démarche pour faciliter d'éventuelles reprises du projet par mes camarades.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>Pour illustrer mon engagement sur l'exigence de qualité (tests et principes objet), voici un exemple en Scala démontrant l'évaluation algorithmique du calculateur de Poker couplée à une logique fonctionnelle immuable :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+// Extrait de l'application Poker (Architecture Fonctionnelle)
+def evaluerMain(cartes: List[Carte]): Combinaison = {
+  require(cartes.length == 5, "Une main doit contenir exactement 5 cartes")
+  val cartesTriees = cartes.sortBy(_.valeur).reverse
+  val occurences = cartesTriees.groupBy(_.valeur).view.mapValues(_.size).toMap
+  
+  // Validation algorithmique via Pattern Matching
+  occurences.values.toList.sorted.reverse match {
+    case List(4, 1) => Carre(cartesTriees)
+    case List(3, 2) => Full(cartesTriees)
+    case _ => CarteHaute(cartesTriees)
+  }
+}
+</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>⚡ Compétence 2 – Optimiser des applications</h3>
+				<button id="toggleButton2">Afficher détaille Compétence</button>
+				<div id ="contexte2" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Durant mes projets d'études, l’optimisation est vite devenue un enjeu majeur. Au début, l'objectif était juste de "faire fonctionner" le code, mais j'ai vite appris à analyser les complexités algorithmiques. Face à au traitement d'un plus grand volume de données, écrire des boucles mal ciblées ralentit énormément les performances. J'ai donc pris le réflexe d'utiliser des structures de tailles adaptées et de filtrer l'information en amont, baissant considérablement le temps d'exécution.
+					</p>
+					<p style="text-indent: 50px">
+						Ce besoin d'optimisation m'a particulièrement touché lors de projets complexes. Par exemple, au lieu de parcourir l'ensemble d'une collection à chaque frame, j'ai mis en place des filtrages conditionnels pour écarter de suite les données hors champ. Ces notions rejoignent la problématique actuelle de l'éco-conception : un traitement optimisé et précis engendre moins de consommation matérielle et mémoire.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>Optimisation du traitement de proximité dans un jeu 2D via une réduction intelligente des comparaisons grâce au filtrage de sous-ensembles :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+// Algorithme ciblé de résolution pour entités (Optimisé)
+function findClosestTarget(bot, entities) {
+    let bestTarget = null;
+    let minDistance = Infinity;
+    
+    // Filtrage conditionnel anticipé pour limiter les lectures superflues
+    const absorbables = entities.filter(e => bot.mass > e.mass * 1.1 && e.id !== bot.id);
+    
+    for (const target of absorbables) {
+        let distSq = Math.pow(bot.x - target.x, 2) + Math.pow(bot.y - target.y, 2);
+        if (distSq < minDistance) {
+            minDistance = distSq;
+            bestTarget = target;
+        }
+    }
+    return bestTarget;
+}
+</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
+				<button id="toggleButton5">Afficher détaille Compétence</button>
+				<div id ="contexte5" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Dans le cadre de cette compétence, j'ai particulièrement veillé à respecter les standards de développement web en structurant mon travail avec une architecture MVC claire. En cas d'évolution du projet, tout le socle technique est scrupuleusement documenté et versionné sur GitHub, m'appuyant sur un script Docker propre pour assurer un redéploiement local très rapide. Le serveur web a ainsi été déployé en local via l'écosystème Docker, où j'ai pu créer et configurer en toute autonomie des conteneurs dédiés pour Apache, PHP et MySQL, en modulant minutieusement les ports, les volumes et les divers services nécessaires.
+					</p>
+					<p style="text-indent: 50px">
+						Sur le plan de l'optimisation, le site a été conçu pour garantir un affichage véloce en environnement local, avec un code scrupuleusement allégé et des requêtes SQL dûment optimisées. J'y ai aussi intégré un protocole HTTPS et des règles de configuration <code>.htaccess</code> pour interdire l'accès à certaines pages critiques et dossiers du serveur. Du point de vue fonctionnel, un formulaire de contact dynamique a été implémenté en PHP et JavaScript, capable d'acheminer des messages via la librairie <em>PHPMailer</em> grâce à la simulation d'un serveur mail local.
+					</p>
+					<p style="text-indent: 50px">
+						La sécurité a été un fil conducteur majeur. L'ensemble des mots de passe sont hachés rigoureusement et la protection des formulaires se fait doublement, côté client et côté serveur. J'ai par ailleurs mis en place une fonctionnalité critique de réinitialisation de mot de passe hautement sécurisée, nécessitant impérativement une vérification stricte de l'adresse e-mail couplée à un token temporaire, tout en appliquant des méthodes de désinfection (sanitization) afin de pallier toute attaque par injection.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>Voici un extrait représentatif de mon processus de déploiement (configuration Docker typique) permettant une mise en place standardisée et indépendante de l'architecture physique :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+version: '3.8'
+services:
+  web:
+    image: php:8.1-apache
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8080:80"
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: portfolio_db
+</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
+				<button id="toggleButton6">Afficher détaille Compétence</button>
+				<div id ="contexte6" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Dans l'approche globale de gestion des données, le développement s'est articulé autour d'une optique de sécurité renforcée et d'intégrité de l'information. Partant de là, l'ensemble des données dites "sensibles" sont systématiquement protégées par le recours au hachage unidirectionnel, interdisant tout stockage à visée non consentie et intégrant intrinsèquement une option de suppression de compte conforme au droit à l'effacement. J'ai activement paré à toute tentative malveillante par cross-site scripting (XSS) via une minutieuse vérification à l'entrée et à tout risque d'injection SQL par un fort usage de requêtes paramétrées.
+					</p>
+					<p style="text-indent: 50px">
+						Au niveau architectural, l'élaboration de la base de données a été précédée par un rigoureux parcours logique de modélisation, avec la construction d'un Modèle Conceptuel de Données (MCD), puis son évolution en Modèle Physique des Données (MPD) via l'outil MySQL Workbench. Ces étapes, soutenues par mes connaissances en logique relationnelle et en algèbre des ensembles, ont été fondamentales pour modéliser précisément les interdépendances entre utilisateurs, produits livrés, et bons de commandes, de manière optimale et dénuée d'anomalies structurelles.
+					</p>
+					<p style="text-indent: 50px">
+						Conséquence de cet exercice de modélisation, la normalisation avancée et validée (jusqu'en 3ème forme normale, 3FN) constitue l'assise essentielle de cette infrastructure. Les clés primaires et les contraintes de clés étrangères orchestrent la cohérence relationnelle et conjurent tout risque de doublons asynchrones. Finalement, ce socle optimisé limite au strict minimum l'empreinte disque en écartant radicalement la redondance ; j'ai par conséquent veillé à retenir des typologies de données strictement adaptées à l'expression de nos besoins, ouvrant la voie à un hébergement respectueux de la contrainte environnementale.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>La normalisation s'illustre particulièrement au travers de requêtes de création (DDL) qui mettent en évidence l'emploi de contraintes solides respectant l'intégrité de la base de données :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+CREATE TABLE produit (
+    id_produit INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prix DECIMAL(10, 2) NOT NULL,
+    id_categorie INT NOT NULL,
+    CONSTRAINT FK_produit_categorie
+        FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie)
+        ON DELETE RESTRICT ON UPDATE CASCADE
+);
+</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>🧭 Compétence 5 – Conduire un projet</h3>
+				<button id="toggleButton4">Afficher détaille Compétence</button>
+				<div id ="contexte4" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Dans le souci de construire un outil en adéquation parfaite avec son environnement professionnel, j'ai débuté l'analyse du projet informatique par une étude minutieuse des différents processus stratégiques et opérationnels, à savoir : la facturation, l'historique de commandes, ou l'organisation de relations clients récurrentes. Ces démarches se sont prolongées au sein de nombreuses réunions avec la direction, mon tuteur et le pôle commercial. Cette concertation continue - marque d'une conception agile - m'a permis d'aligner la conception de mon module e-commerce avec les attentes concrètes de la société et d'une diversité d'utilisateurs métiers, depuis les clients locaux jusqu'aux visiteurs de passage.
+					</p>
+					<p style="text-indent: 50px">
+						À travers chaque itération, force a été de constater des ajustements parfois spontanés, nécessitant de réelles facultés d'adaptation. À titre d'exemple, j'ai eu l'opportunité de formuler des initiatives non exprimées au départ : le déploiement d'une procédure additionnelle de réinitialisation des accès en cas de perte de compte, ou bien l'engagement dans une refonte graphique modernisée sur fond de teintes bleutées. J'y ai également démontré ma capacité de projection dans l'élaboration du cahier des charges dont découlait une gestion de projet séquencée, encadrée par un pilotage sous Trello (sprints), assurant continûment la validation de chacun de mes rendus d’une borne temporelle à l'autre.
+					</p>
+					<p style="text-indent: 50px">
+						Bien sûr, de tels développements supposent avant tout une analyse très rigoureuse des ressources et contraintes techniques, qu'elles soient temporelles, matérielles, ou même règlementaires. C'est en étudiant cette conjoncture par une méthode du type MVC que j'ai pu identifier un juste équilibre. En tant qu'opérateur conscient, j'ai inscrit mes choix de développement sous le prisme de l'accessibilité cognitive, permettant au plus grand nombre la consultation facilitée du projet, tout en assumant fermement nos obligations règlementaires. Le respect indéniable des articles du RGPD est ici central ; un traitement scrupuleux des identifiants hashés et la parution obligatoire des mentions légales ont de fait encadré le dépôt en ligne formel du projet.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>Illustration des contraintes projet identifiées via la définition d'un modèle abstrait (diagramme de cas d'utilisation simplifié) montrant l'interaction entre les différents acteurs du système :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+Actors:
+  - Client Non Identifié
+  - Client Identifié
+  - Administrateur
+
+Use Cases:
+  [Client Identifié] --> (Consulter son historique de commande)
+  [Client Identifié] --> (Passer une commande)
+  [Administrateur] --> (Gérer le catalogue)
+  [Administrateur] --> (Gérer les utilisateurs)
+  (Passer une commande) ..> (S'authentifier) : <<include>>
+</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>🤝 Compétence 6 – Collaborer au sein d'une équipe informatique</h3>
+				<button id="toggleButton3">Afficher détaille Compétence</button>
+				<div id ="contexte3" style="display: none"><br>
+					<p style="text-indent: 50px">
+						Le travail d'équipe est omniprésent dans la formation du BUT Informatique, en grande partie grâce aux Situations d'Apprentissage et d'Évaluation (SAE). Dès le départ, j'ai compris que la communication et l'organisation sont tout aussi importantes que la technique. Travailler à plusieurs exige de définir clairement des objectifs et de partager les tâches via des méthodes agiles (Scrum), en se réunissant régulièrement pour résoudre ensemble les points de blocage.
+					</p>
+					<p style="text-indent: 50px">
+						Pour éviter de perdre du code, j'ai particulièrement pris en main l'outil de versionning Git avec GitHub ou GitLab. Savoir travailler sur des branches séparées, fusionner nos avancées (merge) et limiter les conflits a été un élément décisif. Dans ce contexte, j’ai toujours pris soin d'avoir des messages de commit clairs, et de discuter avec les membres du groupe pour que personne ne se sente mis à l'écart des prises de décision techniques.
+					</p>
+
+					<h4>🔍 Preuve de réalisation</h4>
+					<p>Pour ancrer cet outil coopératif en temps réel, voici une de mes habitudes professionnelles illustrant un cycle de contribution asynchrone maîtrisé sous Git :</p>
+					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+# Processus collaboratif standard en terminal
+$ git checkout -b feature/carte-interactive
+$ git add src/map.js
+$ git commit -m "feat: ajout des marqueurs d'incidents météo (SAE)"
+$ git push origin feature/carte-interactive
+
+# Espace de relecture avant intégration à la branche Main
+# Utilisation formelle de l'outil GitLab pour organiser la 'Code Review' avec l'équipe
+</code></pre>
+				</div>
+			</section>
+		</article>
+	</div>
+
+	<footer id="footer">
+		<ul class="icons">
+			<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+			<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a></li>
+			<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+
+		</ul>
+	</footer>
+
+
+</div>
+
+<div id="bg"></div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const copyEmailButtons = document.querySelectorAll('.copy-email');
+		copyEmailButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const email = button.getAttribute('data-email');
+				if (email) {
+					navigator.clipboard.writeText(email)
+							.then(() => {
+								alert('Email copié dans le presse-papier : ' + email);
+							})
+							.catch(err => {
+								alert('Impossible de copier l\'email : ' + err);
+							});
+				}
+			});
+		});
+	});
+
+
+	// Fonction pour basculer l'affichage du contenu
+	function toggleProjectDisplay2(buttonId, contextId) {
+		var btn = document.getElementById(buttonId);
+		if(!btn) return;
+		btn.addEventListener("click", function() {
+			var contexte = document.getElementById(contextId);
+			if (contexte.style.display === "none") {
+				contexte.style.display = "block";  // Afficher le contenu
+				this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
+			} else {
+				contexte.style.display = "none";  // Cacher le contenu
+				this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
+			}
+		});
+	}
+
+	// Appliquer la fonction à chaque bouton
+	toggleProjectDisplay2("toggleButton1", "contexte1");
+	toggleProjectDisplay2("toggleButton2", "contexte2");
+	toggleProjectDisplay2("toggleButton3", "contexte3");
+	toggleProjectDisplay2("toggleButton4", "contexte4");
+	toggleProjectDisplay2("toggleButton5", "contexte5");
+	toggleProjectDisplay2("toggleButton6", "contexte6");
+
+</script>
+
+
+</body>
+</html>
