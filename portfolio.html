@@ -22,6 +22,12 @@
 	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 		<style>
+		/* Élargir la zone principale (le rectangle noir de l'article) */
+		#main article {
+			width: 95vw !important;
+			max-width: 1400px !important;
+		}
+
 		/* Styles pour garantir que les boutons ne cassent pas */
 		.project-actions button,
 		button[id^="toggleButton"] {
@@ -207,21 +213,35 @@
 							exemple en Scala démontrant l'évaluation algorithmique du calculateur de Poker couplée à une
 							logique fonctionnelle immuable :</p>
 						<pre
-							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
-// Extrait de l'application Poker (Architecture Fonctionnelle)
-def evaluerMain(cartes: List[Carte]): Combinaison = {
-  require(cartes.length == 5, "Une main doit contenir exactement 5 cartes")
-  val cartesTriees = cartes.sortBy(_.valeur).reverse
-  val occurences = cartesTriees.groupBy(_.valeur).view.mapValues(_.size).toMap
-  
-  // Validation algorithmique via Pattern Matching
-  occurences.values.toList.sorted.reverse match {
-    case List(4, 1) => Carre(cartesTriees)
-    case List(3, 2) => Full(cartesTriees)
-    case _ => CarteHaute(cartesTriees)
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px; overflow-x: auto;"><code>/**
+ * Prend exactement 5 cartes et détermine leur valeur au poker (Paire, Brelan, Couleur, etc.).
+ */
+private def evaluer5Cartes(cartes: Set[PlayingCard]): PokerHand = {
+  val cartesTriees = cartes.toList.sortBy(_.rank.id).reverse
+  val rangs = cartesTriees.map(_.rank)
+
+  val estCouleur = cartesTriees.map(_.suit).distinct.size == 1
+
+  val suiteRangs = rangs match {
+    case List(Rank.Ace, Rank.Five, Rank.Four, Rank.Three, Rank.Two) => Some(Rank.Five) // Cas spécial : As-5-4-3-2
+    case _ if rangs.map(_.id).zip(rangs.map(_.id).tail).forall{ case (a, b) => a - b == 1 } => Some(rangs.head)
+    case _ => None
   }
-}
-</code></pre>
+
+  val groupesRangs = rangs.groupBy(identity).view.mapValues(_.size).toList.sortBy(t => (-t._2, -t._1.id))
+
+  (suiteRangs, estCouleur, groupesRangs) match {
+    case (Some(hauteur), true, _) => StraightFlush(hauteur) // Quinte Flush
+    case (_, _, (rang1, 4) :: (rang2, 1) :: Nil) => FourOfAKind(rang1, rang2) // Carré
+    case (_, _, (rang1, 3) :: (rang2, 2) :: Nil) => FullHouse(rang1, rang2) // Full
+    case (_, true, _) => Flush(rangs) // Couleur
+    case (Some(hauteur), false, _) => Straight(hauteur) // Suite / Quinte
+    case (_, _, (rang1, 3) :: reste) => ThreeOfAKind(rang1, reste.map(_._1)) // Brelan
+    case (_, _, (rang1, 2) :: (rang2, 2) :: (rang3, 1) :: Nil) => TwoPair(rang1, rang2, rang3) // Double Paire
+    case (_, _, (rang1, 2) :: reste) => Pair(rang1, reste.map(_._1)) // Paire
+    case _ => HighCard(rangs) // Carte Haute
+  }
+}</code></pre>
 						</div>
 					</div>
 					<div class="competence-card" id="card_contexte2">
@@ -253,28 +273,42 @@ def evaluerMain(cartes: List[Carte]): Combinaison = {
 							l'expérience utilisateur, tout en garantissant une stabilité exemplaire du système en
 							environnement de production.
 						<h4>🔍 Preuve de réalisation</h4>
-						<p>Optimisation du traitement de proximité dans un jeu 2D via une réduction intelligente des
-							comparaisons grâce au filtrage de sous-ensembles :</p>
+						<p>Optimisation du traitement de proximité dans la boucle de jeu d'Orbital.io via la limitation de la fréquence de calcul (throttling) et le filtrage mathématique des objets :</p>
 						<pre
-							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
-// Algorithme ciblé de résolution pour entités (Optimisé)
-function findClosestTarget(bot, entities) {
-    let bestTarget = null;
-    let minDistance = Infinity;
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px; overflow-x: auto;"><code>// Extrait de l'IA d'Orbital.io (Optimisation des performances)
+// L'IA limite le calcul lourd de ciblage à toutes les 0.2s plutôt qu'à chaque frame
+if (this.aiTimer > 0.2) {
+    this.aiTimer = 0;
+    let bestPrey = null; 
+    let minDistSq = Infinity;
     
-    // Filtrage conditionnel anticipé pour limiter les lectures superflues
-    const absorbables = entities.filter(e => bot.mass > e.mass * 1.1 && e.id !== bot.id);
-    
-    for (const target of absorbables) {
-        let distSq = Math.pow(bot.x - target.x, 2) + Math.pow(bot.y - target.y, 2);
-        if (distSq < minDistance) {
-            minDistance = distSq;
-            bestTarget = target;
+    entities.forEach(other => {
+        if (other === this || other.dead || other.name === this.name) return;
+        
+        // Optimisation mathématique : distance au carré pour éviter Math.sqrt() coûteux
+        let distSq = (other.x - this.x)**2 + (other.y - this.y)**2;
+        
+        // Filtrage spatial (culling) et conditionnel (masse de 75%)
+        if (distSq < 800*800 && other.mass < this.mass * 0.75) {
+            if(distSq < minDistSq) { 
+                minDistSq = distSq; 
+                bestPrey = other; 
+            }
+        }
+    });
+
+    if (bestPrey) {
+        // Fonctions trigonométriques coûteuses reportées uniquement sur la cible valide
+        targetAngle = Math.atan2(bestPrey.y - this.y, bestPrey.x - this.x);
+        let dist = Math.sqrt(minDistSq);
+        
+        // Évaluation conditionnelle d'attaque
+        if (this.mass > MIN_MASS_SPLIT * 2 && dist < 400 && dist > r + 50 && Math.random() < 0.05) {
+            this.angle = targetAngle; 
+            splitEntity(this);
         }
     }
-    return bestTarget;
-}
-</code></pre>
+}</code></pre>
 						</div>
 					</div>
 					<div class="competence-card" id="card_contexte5">
@@ -427,20 +461,42 @@ CREATE TABLE produit (
 						<p>Illustration des contraintes projet identifiées via la définition d'un modèle abstrait
 							(diagramme de cas d'utilisation simplifié) montrant l'interaction entre les différents
 							acteurs du système :</p>
-						<pre
-							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
-Actors:
-  - Client Non Identifié
-  - Client Identifié
-  - Administrateur
+						<div class="mermaid" style="text-align: center; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+flowchart LR
+    Visiteur["Visiteur Non Connecté"]
+    Client["Client (Particulier / Professionnel)"]
+    Admin["Administrateur"]
 
-Use Cases:
-  [Client Identifié] --> (Consulter son historique de commande)
-  [Client Identifié] --> (Passer une commande)
-  [Administrateur] --> (Gérer le catalogue)
-  [Administrateur] --> (Gérer les utilisateurs)
-  (Passer une commande) ..> (S'authentifier) : <<include>>
-</code></pre>
+    subgraph "Exemple de site E-commerce"
+        Catalog(["Consulter les produits marins"])
+        Contact(["Soumettre contact / candidature"])
+        Auth(["S'authentifier"])
+        Reset(["Réinitialiser son mot de passe"])
+        Order(["Passer une commande en ligne"])
+        Manage(["Gérer les clients et le catalogue"])
+    end
+
+    Visiteur --> Catalog
+    Visiteur --> Contact
+    Visiteur --> Auth
+    Auth -. "&lt;&lt; extend &gt;&gt;" .-> Reset
+    
+    Client --> Catalog
+    Client --> Order
+    Order -. "&lt;&lt; include &gt;&gt;" .-> Auth
+    
+    Admin --> Manage
+
+    style Visiteur fill:#34495e,stroke:#fff,color:#fff
+    style Client fill:#2980b9,stroke:#fff,color:#fff
+    style Admin fill:#c0392b,stroke:#fff,color:#fff
+    style Catalog fill:#2ecc71,color:#000
+    style Contact fill:#2ecc71,color:#000
+    style Auth fill:#2ecc71,color:#000
+    style Reset fill:#f39c12,color:#000
+    style Order fill:#2ecc71,color:#000
+    style Manage fill:#2ecc71,color:#000
+						</div>
 						</div>
 					</div>
 					<div class="competence-card" id="card_contexte3">
@@ -562,6 +618,11 @@ $ git push origin feature/carte-interactive
 
 	</script>
 
+	<!-- Script Mermaid pour générer le diagramme UML -->
+	<script type="module">
+		import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+	</script>
 
 </body>
 

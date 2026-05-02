@@ -19,7 +19,19 @@
 	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 	<style>
-
+		/* Correction du décalage de la ligne du milieu dans le menu */
+		#header nav.use-middle:after {
+			display: none !important;
+		}
+		#header nav.use-middle ul li.is-middle {
+			border-left: solid 1px #000000 !important;
+		}
+		
+		/* Ajustement léger de la taille du texte pour les petits écrans */
+		#header nav ul li a {
+			padding: 0 0.7rem;
+			font-size: 0.75rem;
+		}
 	</style>
 
 </head>
@@ -37,7 +49,7 @@
 				<p>Une personne attentive et prête à vous écouter</p>
 			</div>
 		</div>
-		<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Portfolio</a></li><li><a href="contact.html#contact">Contact</a></li></ul></nav>
+		<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Apprentissage</a></li><li><a href="contact.html#contact">Contact</a></li></ul></nav>
 	</header>
 
 	<div id="main">
