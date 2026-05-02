@@ -1,170 +1,206 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Site Corentin Martinez</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 	<div id="google_translate_element"></div>
 
 	<script type="text/javascript">
 		function googleTranslateElementInit() {
 			new google.translate.TranslateElement(
-					{ pageLanguage: 'fr' }, // Langue source
-					'google_translate_element'
+				{ pageLanguage: 'fr' }, // Langue source
+				'google_translate_element'
 			);
 		}
 	</script>
 	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 	<style>
-
+		/* Élargir la zone principale pour éviter la barre de défilement sur le menu */
+		#main article {
+			width: 100% !important;
+			max-width: 65rem !important;
+		}
 	</style>
 
 </head>
+
 <body class="is-preload">
 
-<div id="wrapper">
+	<div id="wrapper">
 
-	<header id="header">
-		<div class="logo">
-			<img src="images/image.jpg" alt="Logo">
-		</div>
-		<div class="content">
-			<div class="inner">
-				<h1>Martinez Corentin</h1>
-				<p>Une personne attentive et prête à vous écouter</p>
+		<header id="header">
+			<div class="logo">
+				<img src="images/image.jpg" alt="Logo">
 			</div>
-		</div>
-<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Portfolio</a></li><li><a href="contact.html#contact" class="active-page-link">Contact</a></li></ul></nav>
-	</header>
-
-	<div id="main">
-		<article id="contact">
-					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" class="active-page-link" style="border-bottom:none">Contact</a></nav>
-
-								
-			<form action="https://formsubmit.co/corentin.martinez01@etu.umontpellier.fr" method="POST">
-				<!-- Redirection après envoi (optionnelle, renvoie à l'accueil du portfolio) -->
-				<input type="hidden" name="_next" value="https://corentinmartinez29.github.io/Portfolio/contact.html">
-
-				<!-- Désactive le captcha par sécurité/fluidité -->
-				<input type="hidden" name="_captcha" value="false">
-
-				<div class="fields">
-					<div class="field half">
-						<label for="name">Nom</label>
-						<input type="text" name="name" id="name" required />
-					</div>
-					<div class="field half">
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" required />
-					</div>
-					<div class="field">
-						<label for="message">Message</label>
-						<textarea name="message" id="message" rows="4" required></textarea>
-					</div>
-					<!-- Honeypot inutile avec formsubmit, mais gardé pour correspondre à formsubmit si besoin, formsubmit a sa propre sécurité -->
+			<div class="content">
+				<div class="inner">
+					<h1>Martinez Corentin</h1>
+					<p>Une personne attentive et prête à vous écouter</p>
 				</div>
-				<ul class="actions" style="margin-top: 20px;">
-					<li><input type="submit" value="Envoyer" class="primary" /></li>
-					<li><input type="reset" value="Annuler" /></li>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="apropos.html#about">A propos</a></li>
+					<li><a href="projets.html#work">Projets</a></li>
+					<li><a href="capacites.html#capacites">Capacités</a></li>
+					<li><a href="portfolio.html#portfolioApprentissage">Apprentissage</a></li>
+					<li><a href="contact.html#contact" class="active-page-link">Contact</a></li>
 				</ul>
-			</form>
-		</article>
+			</nav>
+		</header>
+
+		<div id="main">
+			<article id="contact">
+				<nav class="article-nav"
+					style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;">
+					<a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about"
+						style="border-bottom:none">A propos</a><a href="projets.html#work"
+						style="border-bottom:none">Projets</a><a href="capacites.html#capacites"
+						style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage"
+						style="border-bottom:none">Apprentissage</a><a href="contact.html#contact"
+						class="active-page-link" style="border-bottom:none">Contact</a>
+				</nav>
+
+
+				<form action="https://formsubmit.co/corentin.martinez01@etu.umontpellier.fr" method="POST">
+					<!-- Redirection après envoi (optionnelle, renvoie à l'accueil de l'apprentissage) -->
+					<input type="hidden" name="_next"
+						value="https://corentinmartinez29.github.io/Portfolio/contact.html">
+
+					<!-- Désactive le captcha par sécurité/fluidité -->
+					<input type="hidden" name="_captcha" value="false">
+
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Nom</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4" required></textarea>
+						</div>
+						<!-- Honeypot inutile avec formsubmit, mais gardé pour correspondre à formsubmit si besoin, formsubmit a sa propre sécurité -->
+					</div>
+					<ul class="actions" style="margin-top: 20px;">
+						<li><input type="submit" value="Envoyer" class="primary" /></li>
+						<li><input type="reset" value="Annuler" /></li>
+					</ul>
+				</form>
+			</article>
+		</div>
+
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank"
+						rel="noopener noreferrer" class="icon brands fa-linkedin"><span
+							class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer"
+						class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a>
+				</li>
+				<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+
+			</ul>
+		</footer>
+
+
 	</div>
 
-	<footer id="footer">
-		<ul class="icons">
-			<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-			<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a></li>
-			<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+	<div id="bg"></div>
 
-		</ul>
-	</footer>
-
-
-</div>
-
-<div id="bg"></div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const copyEmailButtons = document.querySelectorAll('.copy-email');
-		copyEmailButtons.forEach(button => {
-			button.addEventListener('click', () => {
-				const email = button.getAttribute('data-email');
-				if (email) {
-					navigator.clipboard.writeText(email)
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyEmailButtons = document.querySelectorAll('.copy-email');
+			copyEmailButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					const email = button.getAttribute('data-email');
+					if (email) {
+						navigator.clipboard.writeText(email)
 							.then(() => {
 								alert('Email copié dans le presse-papier : ' + email);
 							})
 							.catch(err => {
 								alert('Impossible de copier l\'email : ' + err);
 							});
-				}
+					}
+				});
 			});
 		});
-	});
 
 
-	// Fonction pour basculer l'affichage du contenu
-	function toggleProjectDisplay(buttonId, contextId) {
-		var btn = document.getElementById(buttonId);
-		if(!btn) return;
-		btn.addEventListener("click", function() {
-			var contexte = document.getElementById(contextId);
-			if (contexte.style.display === "none") {
-				contexte.style.display = "block";  // Afficher le contenu
-				this.textContent = "Cacher Contenu du Projet"; // Changer le texte du bouton
-			} else {
-				contexte.style.display = "none";  // Cacher le contenu
-				this.textContent = "Afficher Contexte du Projet"; // Réinitialiser le texte du bouton
-			}
-		});
-	}
+		// Fonction pour basculer l'affichage du contenu
+		function toggleProjectDisplay(buttonId, contextId) {
+			var btn = document.getElementById(buttonId);
+			if (!btn) return;
+			btn.addEventListener("click", function () {
+				var contexte = document.getElementById(contextId);
+				if (contexte.style.display === "none") {
+					contexte.style.display = "block";  // Afficher le contenu
+					this.textContent = "Cacher Contenu du Projet"; // Changer le texte du bouton
+				} else {
+					contexte.style.display = "none";  // Cacher le contenu
+					this.textContent = "Afficher Contexte du Projet"; // Réinitialiser le texte du bouton
+				}
+			});
+		}
 
-	// Fonction pour basculer l'affichage du contenu
-	function toggleProjectDisplay2(buttonId, contextId) {
-		var btn = document.getElementById(buttonId);
-		if(!btn) return;
-		btn.addEventListener("click", function() {
-			var contexte = document.getElementById(contextId);
-			if (contexte.style.display === "none") {
-				contexte.style.display = "block";  // Afficher le contenu
-				this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
-			} else {
-				contexte.style.display = "none";  // Cacher le contenu
-				this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
-			}
-		});
-	}
+		// Fonction pour basculer l'affichage du contenu
+		function toggleProjectDisplay2(buttonId, contextId) {
+			var btn = document.getElementById(buttonId);
+			if (!btn) return;
+			btn.addEventListener("click", function () {
+				var contexte = document.getElementById(contextId);
+				if (contexte.style.display === "none") {
+					contexte.style.display = "block";  // Afficher le contenu
+					this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
+				} else {
+					contexte.style.display = "none";  // Cacher le contenu
+					this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
+				}
+			});
+		}
 
 
 
-	// Appliquer la fonction à chaque bouton pour les deux projets
-	toggleProjectDisplay("toggleButton1", "contexte1");
-	toggleProjectDisplay("toggleButton2", "contexte2");
-	toggleProjectDisplay("toggleButton3", "contexte3");
-	toggleProjectDisplay2("toggleButton4", "contexte4");
-	toggleProjectDisplay2("toggleButton5", "contexte5");
-	toggleProjectDisplay2("toggleButton6", "contexte6");
+		// Appliquer la fonction à chaque bouton pour les deux projets
+		toggleProjectDisplay("toggleButton1", "contexte1");
+		toggleProjectDisplay("toggleButton2", "contexte2");
+		toggleProjectDisplay("toggleButton3", "contexte3");
+		toggleProjectDisplay2("toggleButton4", "contexte4");
+		toggleProjectDisplay2("toggleButton5", "contexte5");
+		toggleProjectDisplay2("toggleButton6", "contexte6");
 
-	// Nouveaux projets ajoutés
-	toggleProjectDisplay("toggleButton7", "contexte7"); // Météo
-	toggleProjectDisplay("toggleButton8", "contexte8"); // Avatar
-	toggleProjectDisplay("toggleButton9", "contexte9"); // Critiques
-	toggleProjectDisplay("toggleButtonStage", "contexteStage"); // Stage
+		// Nouveaux projets ajoutés
+		toggleProjectDisplay("toggleButton7", "contexte7"); // Météo
+		toggleProjectDisplay("toggleButton8", "contexte8"); // Avatar
+		toggleProjectDisplay("toggleButton9", "contexte9"); // Critiques
+		toggleProjectDisplay("toggleButtonStage", "contexteStage"); // Stage
 
-</script>
+	</script>
 
 
 </body>
+
+</html>t>
+
+
+</body>
+
 </html>

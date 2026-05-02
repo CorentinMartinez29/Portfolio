@@ -1,18 +1,21 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Site Corentin Martinez</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 	<div id="google_translate_element"></div>
 
 	<script type="text/javascript">
 		function googleTranslateElementInit() {
 			new google.translate.TranslateElement(
-					{ pageLanguage: 'fr' }, // Langue source
-					'google_translate_element'
+				{ pageLanguage: 'fr' }, // Langue source
+				'google_translate_element'
 			);
 		}
 	</script>
@@ -33,6 +36,7 @@
 			margin-top: 40px;
 			padding-bottom: 40px;
 		}
+
 		.project-card {
 			width: calc(50% - 20px);
 			background: rgba(255, 255, 255, 0.03);
@@ -43,11 +47,13 @@
 			flex-direction: column;
 			transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 		}
+
 		.project-card:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 			background: rgba(255, 255, 255, 0.06);
 		}
+
 		.project-card h3 {
 			font-size: 1.25rem;
 			margin-bottom: 25px;
@@ -55,6 +61,7 @@
 			min-height: 2.5em;
 			line-height: 1.5;
 		}
+
 		.project-card img.image-adaptable {
 			width: 100%;
 			height: auto;
@@ -64,19 +71,23 @@
 			border: none;
 			margin-bottom: 30px;
 		}
+
 		.project-intro {
 			flex-grow: 1;
 			margin-bottom: 30px;
 		}
+
 		.project-intro p {
 			margin-bottom: 0;
 			text-indent: 0 !important;
 			font-size: 1.05rem;
 			line-height: 1.7;
 		}
+
 		.project-actions {
 			margin-top: auto;
 		}
+
 		.project-actions button {
 			width: 100%;
 			height: auto !important;
@@ -87,6 +98,7 @@
 			font-size: 0.85rem !important;
 			margin-bottom: 0 !important;
 		}
+
 		.project-details {
 			display: block !important;
 			max-height: 0;
@@ -95,43 +107,50 @@
 			padding-top: 0;
 			border-top: 1px solid transparent;
 			opacity: 0;
-			transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-						margin-top 0.4s ease, 
-						padding-top 0.4s ease, 
-						border-top-color 0.4s ease, 
-						opacity 0.4s ease;
+			transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+				margin-top 0.4s ease,
+				padding-top 0.4s ease,
+				border-top-color 0.4s ease,
+				opacity 0.4s ease;
 		}
+
 		.project-details.expanded {
 			margin-top: 30px;
 			padding-top: 30px;
 			border-top-color: rgba(255, 255, 255, 0.1);
 			opacity: 1;
 		}
+
 		.project-details p {
 			text-indent: 0 !important;
 			margin-bottom: 1.2em;
 			font-size: 1rem;
 			line-height: 1.6;
 		}
+
 		@media screen and (max-width: 736px) {
 			.projects-grid {
 				gap: 30px;
 			}
+
 			.project-card {
 				width: 100%;
 				padding: 25px;
 			}
+
 			.project-card img.image-adaptable {
 				max-height: 250px;
 			}
+
 			.project-card h3 {
 				font-size: 1.1rem;
 			}
+
 			.project-intro p {
 				font-size: 0.95rem;
 			}
 		}
-		
+
 		/* Filter Buttons */
 		.filter-controls {
 			display: flex;
@@ -140,6 +159,7 @@
 			margin-bottom: 40px;
 			flex-wrap: wrap;
 		}
+
 		.filter-btn {
 			background: rgba(255, 255, 255, 0.05);
 			border: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -152,7 +172,9 @@
 			font-size: 0.8rem !important;
 			cursor: pointer;
 		}
-		.filter-btn:hover, .filter-btn.active {
+
+		.filter-btn:hover,
+		.filter-btn.active {
 			background: white !important;
 			color: #1b1f22 !important;
 			font-weight: 600;
@@ -161,348 +183,580 @@
 	</style>
 
 </head>
+
 <body class="is-preload">
 
-<div id="wrapper">
+	<div id="wrapper">
 
-	<header id="header">
-		<div class="logo">
-			<img src="images/image.jpg" alt="Logo">
+		<header id="header">
+			<div class="logo">
+				<img src="images/image.jpg" alt="Logo">
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Martinez Corentin</h1>
+					<p>Une personne attentive et prête à vous écouter</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="apropos.html#about">A propos</a></li>
+					<li><a href="projets.html#work" class="active-page-link">Projets</a></li>
+					<li><a href="capacites.html#capacites">Capacités</a></li>
+					<li><a href="portfolio.html#portfolioApprentissage">Apprentissage</a></li>
+					<li><a href="contact.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="main">
+			<article id="work">
+				<nav class="article-nav"
+					style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;">
+					<a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about"
+						style="border-bottom:none">A propos</a><a href="projets.html#work" class="active-page-link"
+						style="border-bottom:none">Projets</a><a href="capacites.html#capacites"
+						style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage"
+						style="border-bottom:none">Apprentissage</a><a href="contact.html#contact"
+						style="border-bottom:none">Contact</a></nav>
+
+				<div class="filter-controls">
+					<button class="filter-btn active" data-filter="all">Tous</button>
+					<button class="filter-btn" data-filter="web">Développement Web</button>
+					<button class="filter-btn" data-filter="logiciel">Logiciels & Jeux</button>
+				</div>
+
+				<div class="projects-grid">
+					<!-- Project Orbital / Agar.io -->
+					<div class="project-card" data-category="logiciel">
+						<h3>Projet – Jeu Orbital.io (Janvier 2026)</h3>
+						<img src="images/orbital.png" alt="Contexte Projet Orbital" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Un projet de développement d'un jeu web dans l'espace en WebGL
+								(PIXI.js), se basant sur une zone de jeu avec des bots et un système d'IA prédictif à
+								base de comportements de fuite/poursuite.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton11">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte11" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif de ce projet
+								était de développer un jeu de survie spatiale en arène optimisé directement pour le
+								navigateur. L'enjeu principal était de concevoir un système de collision en 2D, une
+								gestion de la masse dynamique, et des intelligences algorithmiques performantes capables
+								de gérer des dizaines d'entités simultanément en temps réel.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis
+								concentré sur le développement du moteur complet de la simulation. J'ai dû implémenter
+								le système de rendu de la caméra dynamique, la physique de déplacement (inertie,
+								friction, fragmentation) et le fonctionnement de l'IA. De plus, j'ai synchronisé cette
+								logique graphique avec un système audio réactif généré procéduralement selon les
+								interactions sur le plateau.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>PIXI.js
+										(WebGL)</strong></u> : pour le rendu graphique matériellement accéléré, ce qui
+								m'a permis d'afficher un grand nombre d'objets avec un framerate (FPS) extrêmement
+								fluide.<br>• <u><strong>Web Audio API</strong></u> : pour synthétiser des effets sonores
+								interactifs directement en code javascript selon les actions de la partie.<br>•
+								<u><strong>JavaScript ES6+</strong></u> : indispensable pour structurer le cœur du jeu
+								avec une approche Orientée Objet rigoureuse (classes d'Entités, de bots, contrôleur
+								local).</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>•
+								<strong>Algorithmique et mathématiques vectorielles</strong>: modélisation mathématique
+								du transfert de masse, du rebond et des forces appliquées sur le canvas.<br>•
+								<strong>Ingénierie graphique</strong> : parfaite appréhension de l'environnement WebGL,
+								de l'optimisation des flux de dessin, et de la boucle de rafraîchissement continue (game
+								loop).<br>• <strong>Intelligence Artificielle</strong> : implémentation de prises de
+								décision automatiques pour que les ennemis puissent s'adapter, cibler les proies
+								vulnérables et fuir le danger en temps de calcul minimal.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C'était un projet
+								passionnant et technique. Ça m'a vraiment aidé à consolider mes bases de calcul
+								asynchrone en JavaScript et à comprendre comment optimiser le cycle de vie d'une
+								architecture complexe soumise à de fortes contraintes de performances.</p>
+						</div>
+					</div>
+
+					<!-- Project Poker -->
+					<div class="project-card" data-category="logiciel">
+						<h3>Projet – Calculateur de Probabilités Poker (Avril 2026)</h3>
+						<img src="images/poker.png" alt="Contexte Projet Poker" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Ce projet consistait à développer un calculateur de probabilités
+								pour le Texas Hold'em en utilisant les principes de la programmation fonctionnelle en
+								Scala, couplé à une interface visuelle réactive pour afficher les statistiques en temps
+								réel.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton10">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte10" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif de ce projet
+								était de coder un calculateur de probabilités pour le poker, spécifiquement pour le
+								Texas Hold'em. La contrainte principale, et le vrai défi, était de tout réaliser en
+								suivant les principes de la programmation fonctionnelle.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis
+								concentré sur le "moteur" du jeu. J'ai dû modéliser la structure des cartes et des
+								mains, et coder les algorithmes qui calculent en direct les chances de gagner d'un
+								joueur, en fonction de ses cartes, de celles sur la table et de celles qui restent dans
+								le paquet. Ensuite, j'ai relié cette logique à une interface visuelle pour qu'on puisse
+								voir les statistiques s'actualiser en temps réel pendant la partie.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>•
+								<u><strong>Scala</strong></u> : pour le cœur du projet, ce qui m'a permis d'appliquer
+								les concepts de la programmation fonctionnelle (comme l'immuabilité).<br>•
+								<u><strong>Interface graphique</strong></u> : pour créer la table de jeu virtuelle avec
+								l'affichage interactif des probabilités, du pot et de la cave.<br>• <u><strong>Tests
+										unitaires</strong></u> : indispensables ici pour être sûr à 100 % que le
+								programme reconnaissait correctement les combinaisons (paires, suites, couleurs, etc.)
+								et que les pourcentages étaient justes.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>•
+								<strong>Algorithmique et mathématiques</strong>: conception d'algorithmes de
+								combinatoire capables de gérer toutes les situations possibles sur le plateau.<br>•
+								<strong>Programmation fonctionnelle</strong> : j'ai vraiment appris à penser
+								différemment, en utilisant des fonctions pures et des traits (comme scala.math.Ordering)
+								pour trier et comparer les mains.<br>• <strong>Optimisation</strong> : gestion de la
+								complexité temporelle pour que le calcul des nombreuses combinaisons se fasse sans faire
+								ramer l'application.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C'était un projet
+								très formateur. Ça m'a vraiment aidé à consolider mes bases en Scala et à comprendre
+								comment connecter une logique mathématique assez lourde à une interface utilisateur
+								réactive.</p>
+						</div>
+					</div>
+
+					<!-- Project Météo -->
+					<div class="project-card" data-category="web">
+						<h3>SAE – Application Météo Nautique (Septembre 2025 - Avril 2026)</h3>
+						<img src="images/imageSAEMeteo.png" alt="Contexte SAE Météo" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Dans le cadre de cette SAE, nous avons développé une application
+								web destinée aux amateurs de sports nautiques, permettant de consulter les conditions
+								météorologiques en temps réel. J'ai été responsable de la pièce maîtresse de
+								l'application : la carte interactive.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton7">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte7" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Le projet visait à
+								répondre au besoin des sportifs nautiques de connaître précisément les conditions (vent,
+								houle, température) avant une sortie. Le développement a suivi la méthode Scrum.
+								L'application devait agréger des données de différentes sources et modèles de prévision.
+							</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis
+								chargé de la conception et de l'intégration de la carte météorologique interactive. J'ai
+								implémenté la visualisation en direct des couches de données (vent, pluie, température)
+								sur la carte. J'ai également développé l'interactivité permettant d'afficher toutes les
+								stations météo mondiales.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>•
+								<u><strong>JavaScript (Framework cartographique)</strong></u> : Pour la gestion de la
+								carte interactive.<br>• <u><strong>API REST</strong></u> : Consommation de services web
+								pour récupérer les données météo.<br>• <u><strong>Docker</strong></u> : Pour la
+								conteneurisation.<br>• <u><strong>Gitlab CI/CD</strong></u> : Pour l'intégration
+								continue.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Manipulation et
+								visualisation de données géographiques.<br>• Consommation d'API tierces complexes.<br>•
+								Travail en méthode Agile (Scrum).<br>• Gestion de l'interactivité front-end avancée.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a
+								appris à gérer des flux de données importants et à les rendre intelligibles visuellement
+								pour l'utilisateur.</p>
+						</div>
+					</div>
+
+					<!-- Project Critiques Full Stack -->
+					<div class="project-card" data-category="web">
+						<h3>SAE – Site de Critiques Full Stack (Novembre 2025 - Janvier 2026)</h3>
+						<img src="images/imageToilette.png" alt="Contexte Projet Critiques" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Pour ce projet de fin de semestre, nous avons réalisé une
+								architecture complète séparant le Back-end (API) et le Front-end (Client). Nous avons
+								créé une plateforme de critiques communautaire.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton9">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte9" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Le projet nécessitait la
+								création d'une API REST robuste avec Symfony/API Platform et d'une interface client
+								réactive en Vue.js. L'objectif était de permettre aux utilisateurs de consulter, noter
+								et critiquer des œuvres.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis
+								chargé de toute la partie Gestion du Profil Utilisateur côté client. J'ai développé les
+								interfaces et la logique permettant à un utilisateur connecté de retrouver ses
+								informations personnelles ainsi que l'historique de ses avis. J'ai implémenté la
+								modification, la suppression de compte et la déconnexion.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>•
+								<u><strong>Vue.js</strong></u> : Pour le développement de l'interface utilisateur
+								réactive.<br>• <u><strong>Symfony (API Platform)</strong></u> : Pour le backend et la
+								gestion des données.<br>• <u><strong>JWT</strong></u> : Pour la gestion de
+								l'authentification.<br>• <u><strong>Axios</strong></u> : Pour les requêtes HTTP
+								asynchrones.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Communication
+								Client-Serveur.<br>• Gestion de l'état utilisateur (Session, Token).<br>• Développement
+								de composants Vue.js réutilisables.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a
+								permis de comprendre concrètement l'architecture "Headless" (API séparée du Front).</p>
+						</div>
+					</div>
+
+					<!-- Project Avatar -->
+					<div class="project-card" data-category="web">
+						<h3>Projet – My Avatar (Service centralisé d'avatars) (Octobre 2025)</h3>
+						<img src="images/imageSAEAvatar.png" alt="Contexte Projet Avatar" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Ce projet consistait à développer un clone du service Gravatar,
+								permettant de centraliser la gestion des photos de profil via une adresse email. J'ai
+								travaillé principalement sur l'architecture backend et la sécurité.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton8">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte8" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de créer
+								une application web en "server-side rendering" avec Symfony capable de servir des
+								avatars à partir du hachage (SHA256) d'une adresse email. L'application devait permettre
+								l'inscription, la gestion de profil et la sécurisation des données.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>J'ai été
+								responsable de l'architecture de la base de données, garantissant une structure solide.
+								J'ai géré la sécurité des accès, notamment la gestion des mots de passe (hachage). J'ai
+								également intégré le serveur SMTP de Google pour la gestion des emails.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Symfony
+										& Twig</strong></u> : Pour le développement backend et le rendu des vues.<br>•
+								<u><strong>SQL (MySQL/MariaDB)</strong></u> : Pour la persistance des données.<br>•
+								<u><strong>SMTP Google</strong></u> : Pour l'envoi d'emails depuis l'application.<br>•
+								<u><strong>CSS</strong></u> : Pour la mise en forme et le design.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Conception et
+								architecture de base de données relationnelle.<br>• Sécurisation d'une application
+								Symfony.<br>• Intégration de services tiers (Emailing).</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>J'ai approfondi ma
+								maîtrise du framework Symfony et des bonnes pratiques de sécurité web.</p>
+						</div>
+					</div>
+
+					<!-- Project Stage -->
+					<div class="project-card" data-category="web">
+						<h3>Stagiaire Développement Web – Stage (Février 2025Avril 2025)</h3>
+						<img src="images/pechesite.png" alt="Contexte Stage" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Lors de mon stage à La Pêcherie Cettoise, j'ai conçu et développé
+								de manière entièrement autonome un nouveau site web avec une architecture MVC en
+								PHP/MySQL, en remplaçant la solution obsolète et en préparant le terrain pour un futur
+								e-commerce.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButtonStage">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexteStage" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>J'ai réalisé mon stage à
+								La Pêcherie Cettoise, une entreprise locale qui vend des produits de la mer à la fois
+								aux professionnels (restaurateurs, poissonneries) et aux particuliers. Leur ancien site
+								était devenu obsolète, ma mission a donc été de repartir de zéro pour créer un site
+								vitrine moderne et poser les bases d'un futur module e-commerce.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Étant le
+								seul développeur sur ce projet, j'ai dû faire preuve de beaucoup d'autonomie pour gérer
+								le site de A à Z. J'ai modélisé la base de données relationnelle, développé les
+								interfaces (catalogue de produits, formulaires, espace client) et géré toute la logique
+								back-end. Je travaillais aussi en lien direct avec la directrice commerciale et mon
+								tuteur pour m'assurer que mes développements répondaient bien aux besoins de
+								l'entreprise.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>•
+								<u><strong>Architecture MVC</strong></u> : J'ai structuré tout le projet avec le modèle
+								Modèle-Vue-Contrôleur pour bien séparer la logique métier de l'affichage, ce qui rendra
+								le code beaucoup plus facile à maintenir par la suite.<br>• <u><strong>PHP &
+										MySQL</strong></u> : Pour le développement du back-end et la gestion de la base
+								de données.<br>• <u><strong>HTML5, CSS3 & JavaScript</strong></u> : Pour l'interface
+								utilisateur, afin de rendre le site dynamique et responsive.<br>• <u><strong>Git /
+										GitHub</strong></u> : Indispensable pour versionner mon code et garder un
+								historique propre, même en travaillant seul.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <u><strong>La
+										sécurité des données</strong></u> : J'ai dû créer un système de réinitialisation
+								de mot de passe. Au lieu d'envoyer un lien basique, j'ai mis en place un système
+								sécurisé générant un "token" unique et temporaire via PHP pour éviter les failles.<br>•
+								<u><strong>Algorithmique et base de données</strong></u> : Un gros défi a été
+								l'importation de leur base de clients existante via des fichiers CSV. J'ai développé un
+								script qui insère les clients et crée automatiquement leurs comptes utilisateurs
+								associés, tout en faisant des vérifications pour éviter les doublons.<br>•
+								<u><strong>Gestion de projet Agile</strong></u> : Pour ne pas m'éparpiller, j'ai découpé
+								mon travail en "sprints" d'une semaine et je m'imposais des mini "daily meetings" pour
+								structurer mes journées et tenir les délais.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C’était une super
+								expérience, très complète. Face aux problèmes (comme l'optimisation des requêtes SQL),
+								j'ai dû être proactif et chercher des solutions par moi-même. Ça m'a vraiment permis de
+								consolider mes compétences en développement full-stack et de comprendre comment gérer un
+								projet technique complet en totale autonomie.</p>
+						</div>
+					</div>
+
+					<!-- Project Web -->
+					<div class="project-card" data-category="web">
+						<h3>SAE – Application Web (Septembre 2024 - Janvier 2025)</h3>
+						<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Dans le cadre de ce projet, j'ai conçu une application web
+								complète en PHP et SQL pour gérer le suivi académique des étudiants. L'objectif
+								principal était de créer une plateforme capable de gérer les informations liées aux
+								étudiants, leurs résultats, et leur éligibilité à différents programmes
+								universitaires.<br><br></p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton3">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte3" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Ce projet visait à
+								fournir une solution de gestion moderne pour le suivi des étudiants. Les utilisateurs
+								peuvent entrer des informations concernant les notes des étudiants et vérifier leur
+								éligibilité pour des programmes particuliers. La méthodologie Agile a permis une
+								collaboration étroite avec les clients.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Mon rôle
+								dans ce projet a été très varié. J'ai conçu et implémenté les données dans la base de
+								données en utilisant PHP et SQL. En parallèle, j'ai participé au développement du
+								back-end en intégrant la logique métier, tout en améliorant l'ergonomie du front-end à
+								l'aide de HTML, CSS et JavaScript.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>PHP &
+										SQL</strong></u> : Développement back-end.<br>• <u><strong>HTML/CSS &
+										JavaScript</strong></u> : Création de pages dynamiques et interactives.<br>•
+								<u><strong>Trello & Lucid</strong></u> : Outils de gestion de projet.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Mise en œuvre des
+								exigences des clients.<br>• Création et gestion de bases de données.<br>• Amélioration
+								des compétences en PHP et SQL.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a
+								permis de consolider mes compétences en développement web et en gestion de bases de
+								données.</p>
+						</div>
+					</div>
+
+					<!-- Project Trains -->
+					<div class="project-card" data-category="logiciel">
+						<h3>SAE – Jeu de société « TRAINS » (Janvier 2024 - Juin 2024)</h3>
+						<img src="images/imageSAETrains.png" alt="Contexte SAE Trains" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Dans le cadre de ma formation, j'ai participé au développement
+								d'une version numérique d'un jeu de société en Java. Ce projet m'a permis d'adopter une
+								approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à
+								travers une interface interactive.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton2">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte2" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de
+								transposer un jeu de société sur ordinateur tout en respectant ses règles et sa
+								mécanique. Les principales fonctionnalités incluent la gestion des cartes, le placement
+								des rails et l'exécution des actions de jeu.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Mon rôle a
+								consisté à développer les mécanismes essentiels du jeu, y compris la gestion des cartes,
+								le placement des rails et les interactions entre les joueurs. J'ai créé une interface
+								utilisateur intuitive et ergonomique pour faciliter la navigation et la visualisation
+								des actions en temps réel.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>•
+								<u><strong>Java</strong></u> : pour le développement des mécanismes du jeu.<br>•
+								<u><strong>JavaFX</strong></u> : pour créer une interface utilisateur fluide et
+								interactive.<br>• <u><strong>Tests unitaires</strong></u> : pour assurer la fiabilité
+								des fonctionnalités.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>•
+								<u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour la
+								gestion des cartes et du plateau.<br>• <u><strong>Qualité et lisibilité du
+										code</strong></u> : respect des bonnes pratiques.<br>•
+								<u><strong>Ergonomie</strong></u> : mise en place d'une interface intuitive.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a
+								permis de consolider mes compétences en Java, en développement orienté objet et en
+								conception d'interface utilisateur.</p>
+						</div>
+					</div>
+
+					<!-- Project E3SETE -->
+					<div class="project-card" data-category="logiciel">
+						<h3>SAE E3SETE – Jeu de cartes numérique (Octobre 2023 - Décembre 2023)</h3>
+						<img src="images/ImageE3SETE.png" alt="Contexte SAE Jeu de cartes" class="image-adaptable">
+						<div class="project-intro">
+							<p style="text-indent: 0">Dans le cadre de ma formation, j'ai participé au développement
+								d'une version numérique d'un jeu de cartes inventé par mon professeur, en utilisant
+								Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu
+								et en créer une version fonctionnelle à travers une interface en ligne de commande, sans
+								nécessiter d'interface graphique.</p>
+						</div>
+						<div class="project-actions">
+							<button id="toggleButton1">Afficher Contexte du Projet</button>
+						</div>
+						<div id="contexte1" class="project-details" style="display:none;">
+							<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de
+								transposer un jeu de cartes sur ordinateur en respectant ses règles et mécaniques, avec
+								des fonctionnalités telles que la gestion des cartes et l'exécution des actions de jeu.
+								La logique du jeu a été implémentée à l'aide d'algorithmes qui géraient les interactions
+								entre les cartes et les actions des joueurs.</p>
+							<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>J'ai conçu
+								et développé les mécanismes principaux du jeu, incluant la gestion des cartes,
+								l'assignation des actions aux cartes, et la gestion de l'interaction entre les joueurs.
+								J'ai également développé les algorithmes qui ont permis d'exécuter les actions et de
+								gérer l'état du jeu à chaque tour.</p>
+							<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Java
+										:</strong></u> pour la programmation orientée objet et le développement des
+								mécanismes du jeu.<br>• <u><strong>Terminal</strong></u> : pour interagir avec le jeu
+								sans interface graphique.<br>• <u><strong>Tests unitaires</strong></u> : pour tester les
+								fonctionnalités du jeu et garantir sa stabilité.<br>• <u><strong>Structures de
+										données</strong></u> : pour organiser les cartes et les actions de manière
+								optimale.</p>
+							<p style="text-indent: 0"><strong>Compétences développées :</strong><br>•
+								<u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour gérer les
+								mécanismes du jeu.<br>• <u><strong>Développement orienté objet</strong></u> : maîtrise
+								de la conception modulaire.<br>• <u><strong>Tests unitaires</strong></u> : mise en place
+								de tests pour assurer la robustesse.<br>• <u><strong>Gestion de projet</strong></u> :
+								collaboration avec l'équipe.</p>
+							<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a
+								permis de renforcer mes compétences en Java et en développement orienté objet, de
+								maîtriser la gestion des interactions dans un jeu sans interface graphique, et de
+								travailler sur l'assurance qualité.</p>
+						</div>
+					</div>
+				</div>
+
+
+			</article>
+
+			<!-- Footer -->
+			<footer class="custom-footer"
+				style="text-align: center; color: rgba(255, 255, 255, 0.5); padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 2rem;">
+				<p class="copyright" style="font-size: 0.9rem; letter-spacing: 2px;">&copy; Corentin Martinez |
+					Apprentissage</p>
+			</footer>
 		</div>
-		<div class="content">
-			<div class="inner">
-				<h1>Martinez Corentin</h1>
-				<p>Une personne attentive et prête à vous écouter</p>
-			</div>
-		</div>
-<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html#about">A propos</a></li><li><a href="projets.html#work" class="active-page-link">Projets</a></li><li><a href="capacites.html#capacites">Capacités</a></li><li><a href="portfolio.html#portfolioApprentissage">Portfolio</a></li><li><a href="contact.html#contact">Contact</a></li></ul></nav>
-	</header>
 
-	<div id="main">
-		<article id="work">
-					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" class="active-page-link" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" style="border-bottom:none">Contact</a></nav>
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank"
+						rel="noopener noreferrer" class="icon brands fa-linkedin"><span
+							class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer"
+						class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a>
+				</li>
+				<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
 
-			<div class="filter-controls">
-				<button class="filter-btn active" data-filter="all">Tous</button>
-				<button class="filter-btn" data-filter="web">Développement Web</button>
-				<button class="filter-btn" data-filter="logiciel">Logiciels & Jeux</button>
-			</div>
-
-			<div class="projects-grid">
-				<!-- Project Orbital / Agar.io -->
-				<div class="project-card" data-category="logiciel">
-					<h3>Projet – Jeu Orbital.io (Janvier 2026)</h3>
-					<img src="images/orbital.png" alt="Contexte Projet Orbital" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Un projet de développement d'un jeu web dans l'espace en WebGL (PIXI.js), se basant sur une zone de jeu avec des bots et un système d'IA prédictif à base de comportements de fuite/poursuite.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton11">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte11" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif de ce projet était de développer un jeu de survie spatiale en arène optimisé directement pour le navigateur. L'enjeu principal était de concevoir un système de collision en 2D, une gestion de la masse dynamique, et des intelligences algorithmiques performantes capables de gérer des dizaines d'entités simultanément en temps réel.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis concentré sur le développement du moteur complet de la simulation. J'ai dû implémenter le système de rendu de la caméra dynamique, la physique de déplacement (inertie, friction, fragmentation) et le fonctionnement de l'IA. De plus, j'ai synchronisé cette logique graphique avec un système audio réactif généré procéduralement selon les interactions sur le plateau.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>PIXI.js (WebGL)</strong></u> : pour le rendu graphique matériellement accéléré, ce qui m'a permis d'afficher un grand nombre d'objets avec un framerate (FPS) extrêmement fluide.<br>• <u><strong>Web Audio API</strong></u> : pour synthétiser des effets sonores interactifs directement en code javascript selon les actions de la partie.<br>• <u><strong>JavaScript ES6+</strong></u> : indispensable pour structurer le cœur du jeu avec une approche Orientée Objet rigoureuse (classes d'Entités, de bots, contrôleur local).</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <strong>Algorithmique et mathématiques vectorielles</strong>: modélisation mathématique du transfert de masse, du rebond et des forces appliquées sur le canvas.<br>• <strong>Ingénierie graphique</strong> : parfaite appréhension de l'environnement WebGL, de l'optimisation des flux de dessin, et de la boucle de rafraîchissement continue (game loop).<br>• <strong>Intelligence Artificielle</strong> : implémentation de prises de décision automatiques pour que les ennemis puissent s'adapter, cibler les proies vulnérables et fuir le danger en temps de calcul minimal.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C'était un projet passionnant et technique. Ça m'a vraiment aidé à consolider mes bases de calcul asynchrone en JavaScript et à comprendre comment optimiser le cycle de vie d'une architecture complexe soumise à de fortes contraintes de performances.</p>
-					</div>
-				</div>
-
-				<!-- Project Poker -->
-				<div class="project-card" data-category="logiciel">
-					<h3>Projet – Calculateur de Probabilités Poker (Avril 2026)</h3>
-					<img src="images/poker.png" alt="Contexte Projet Poker" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Ce projet consistait à développer un calculateur de probabilités pour le Texas Hold'em en utilisant les principes de la programmation fonctionnelle en Scala, couplé à une interface visuelle réactive pour afficher les statistiques en temps réel.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton10">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte10" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif de ce projet était de coder un calculateur de probabilités pour le poker, spécifiquement pour le Texas Hold'em. La contrainte principale, et le vrai défi, était de tout réaliser en suivant les principes de la programmation fonctionnelle.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis concentré sur le "moteur" du jeu. J'ai dû modéliser la structure des cartes et des mains, et coder les algorithmes qui calculent en direct les chances de gagner d'un joueur, en fonction de ses cartes, de celles sur la table et de celles qui restent dans le paquet. Ensuite, j'ai relié cette logique à une interface visuelle pour qu'on puisse voir les statistiques s'actualiser en temps réel pendant la partie.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Scala</strong></u> : pour le cœur du projet, ce qui m'a permis d'appliquer les concepts de la programmation fonctionnelle (comme l'immuabilité).<br>• <u><strong>Interface graphique</strong></u> : pour créer la table de jeu virtuelle avec l'affichage interactif des probabilités, du pot et de la cave.<br>• <u><strong>Tests unitaires</strong></u> : indispensables ici pour être sûr à 100 % que le programme reconnaissait correctement les combinaisons (paires, suites, couleurs, etc.) et que les pourcentages étaient justes.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <strong>Algorithmique et mathématiques</strong>: conception d'algorithmes de combinatoire capables de gérer toutes les situations possibles sur le plateau.<br>• <strong>Programmation fonctionnelle</strong> : j'ai vraiment appris à penser différemment, en utilisant des fonctions pures et des traits (comme scala.math.Ordering) pour trier et comparer les mains.<br>• <strong>Optimisation</strong> : gestion de la complexité temporelle pour que le calcul des nombreuses combinaisons se fasse sans faire ramer l'application.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C'était un projet très formateur. Ça m'a vraiment aidé à consolider mes bases en Scala et à comprendre comment connecter une logique mathématique assez lourde à une interface utilisateur réactive.</p>
-					</div>
-				</div>
-
-				<!-- Project Météo -->
-				<div class="project-card" data-category="web">
-					<h3>SAE – Application Météo Nautique (Septembre 2025 - Avril 2026)</h3>
-					<img src="images/imageSAEMeteo.png" alt="Contexte SAE Météo" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Dans le cadre de cette SAE, nous avons développé une application web destinée aux amateurs de sports nautiques, permettant de consulter les conditions météorologiques en temps réel. J'ai été responsable de la pièce maîtresse de l'application : la carte interactive.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton7">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte7" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Le projet visait à répondre au besoin des sportifs nautiques de connaître précisément les conditions (vent, houle, température) avant une sortie. Le développement a suivi la méthode Scrum. L'application devait agréger des données de différentes sources et modèles de prévision.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis chargé de la conception et de l'intégration de la carte météorologique interactive. J'ai implémenté la visualisation en direct des couches de données (vent, pluie, température) sur la carte. J'ai également développé l'interactivité permettant d'afficher toutes les stations météo mondiales.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>JavaScript (Framework cartographique)</strong></u> : Pour la gestion de la carte interactive.<br>• <u><strong>API REST</strong></u> : Consommation de services web pour récupérer les données météo.<br>• <u><strong>Docker</strong></u> : Pour la conteneurisation.<br>• <u><strong>Gitlab CI/CD</strong></u> : Pour l'intégration continue.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Manipulation et visualisation de données géographiques.<br>• Consommation d'API tierces complexes.<br>• Travail en méthode Agile (Scrum).<br>• Gestion de l'interactivité front-end avancée.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a appris à gérer des flux de données importants et à les rendre intelligibles visuellement pour l'utilisateur.</p>
-					</div>
-				</div>
-
-				<!-- Project Critiques Full Stack -->
-				<div class="project-card" data-category="web">
-					<h3>SAE – Site de Critiques Full Stack (Novembre 2025 - Janvier 2026)</h3>
-					<img src="images/imageToilette.png" alt="Contexte Projet Critiques" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Pour ce projet de fin de semestre, nous avons réalisé une architecture complète séparant le Back-end (API) et le Front-end (Client). Nous avons créé une plateforme de critiques communautaire.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton9">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte9" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Le projet nécessitait la création d'une API REST robuste avec Symfony/API Platform et d'une interface client réactive en Vue.js. L'objectif était de permettre aux utilisateurs de consulter, noter et critiquer des œuvres.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Je me suis chargé de toute la partie Gestion du Profil Utilisateur côté client. J'ai développé les interfaces et la logique permettant à un utilisateur connecté de retrouver ses informations personnelles ainsi que l'historique de ses avis. J'ai implémenté la modification, la suppression de compte et la déconnexion.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Vue.js</strong></u> : Pour le développement de l'interface utilisateur réactive.<br>• <u><strong>Symfony (API Platform)</strong></u> : Pour le backend et la gestion des données.<br>• <u><strong>JWT</strong></u> : Pour la gestion de l'authentification.<br>• <u><strong>Axios</strong></u> : Pour les requêtes HTTP asynchrones.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Communication Client-Serveur.<br>• Gestion de l'état utilisateur (Session, Token).<br>• Développement de composants Vue.js réutilisables.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a permis de comprendre concrètement l'architecture "Headless" (API séparée du Front).</p>
-					</div>
-				</div>
-
-				<!-- Project Avatar -->
-				<div class="project-card" data-category="web">
-					<h3>Projet – My Avatar (Service centralisé d'avatars) (Octobre 2025)</h3>
-					<img src="images/imageSAEAvatar.png" alt="Contexte Projet Avatar" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Ce projet consistait à développer un clone du service Gravatar, permettant de centraliser la gestion des photos de profil via une adresse email. J'ai travaillé principalement sur l'architecture backend et la sécurité.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton8">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte8" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de créer une application web en "server-side rendering" avec Symfony capable de servir des avatars à partir du hachage (SHA256) d'une adresse email. L'application devait permettre l'inscription, la gestion de profil et la sécurisation des données.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>J'ai été responsable de l'architecture de la base de données, garantissant une structure solide. J'ai géré la sécurité des accès, notamment la gestion des mots de passe (hachage). J'ai également intégré le serveur SMTP de Google pour la gestion des emails.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Symfony & Twig</strong></u> : Pour le développement backend et le rendu des vues.<br>• <u><strong>SQL (MySQL/MariaDB)</strong></u> : Pour la persistance des données.<br>• <u><strong>SMTP Google</strong></u> : Pour l'envoi d'emails depuis l'application.<br>• <u><strong>CSS</strong></u> : Pour la mise en forme et le design.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Conception et architecture de base de données relationnelle.<br>• Sécurisation d'une application Symfony.<br>• Intégration de services tiers (Emailing).</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>J'ai approfondi ma maîtrise du framework Symfony et des bonnes pratiques de sécurité web.</p>
-					</div>
-				</div>
-
-				<!-- Project Stage -->
-				<div class="project-card" data-category="web">
-					<h3>Stagiaire Développement Web  – Stage (Février 2025Avril 2025)</h3>
-					<img src="images/pechesite.png" alt="Contexte Stage" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Lors de mon stage à La Pêcherie Cettoise, j'ai conçu et développé de manière entièrement autonome un nouveau site web avec une architecture MVC en PHP/MySQL, en remplaçant la solution obsolète et en préparant le terrain pour un futur e-commerce.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButtonStage">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexteStage" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>J'ai réalisé mon stage à La Pêcherie Cettoise, une entreprise locale qui vend des produits de la mer à la fois aux professionnels (restaurateurs, poissonneries) et aux particuliers. Leur ancien site était devenu obsolète, ma mission a donc été de repartir de zéro pour créer un site vitrine moderne et poser les bases d'un futur module e-commerce.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Étant le seul développeur sur ce projet, j'ai dû faire preuve de beaucoup d'autonomie pour gérer le site de A à Z. J'ai modélisé la base de données relationnelle, développé les interfaces (catalogue de produits, formulaires, espace client) et géré toute la logique back-end. Je travaillais aussi en lien direct avec la directrice commerciale et mon tuteur pour m'assurer que mes développements répondaient bien aux besoins de l'entreprise.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Architecture MVC</strong></u> : J'ai structuré tout le projet avec le modèle Modèle-Vue-Contrôleur pour bien séparer la logique métier de l'affichage, ce qui rendra le code beaucoup plus facile à maintenir par la suite.<br>• <u><strong>PHP & MySQL</strong></u> : Pour le développement du back-end et la gestion de la base de données.<br>• <u><strong>HTML5, CSS3 & JavaScript</strong></u> : Pour l'interface utilisateur, afin de rendre le site dynamique et responsive.<br>• <u><strong>Git / GitHub</strong></u> : Indispensable pour versionner mon code et garder un historique propre, même en travaillant seul.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <u><strong>La sécurité des données</strong></u> : J'ai dû créer un système de réinitialisation de mot de passe. Au lieu d'envoyer un lien basique, j'ai mis en place un système sécurisé générant un "token" unique et temporaire via PHP pour éviter les failles.<br>• <u><strong>Algorithmique et base de données</strong></u> : Un gros défi a été l'importation de leur base de clients existante via des fichiers CSV. J'ai développé un script qui insère les clients et crée automatiquement leurs comptes utilisateurs associés, tout en faisant des vérifications pour éviter les doublons.<br>• <u><strong>Gestion de projet Agile</strong></u> : Pour ne pas m'éparpiller, j'ai découpé mon travail en "sprints" d'une semaine et je m'imposais des mini "daily meetings" pour structurer mes journées et tenir les délais.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>C’était une super expérience, très complète. Face aux problèmes (comme l'optimisation des requêtes SQL), j'ai dû être proactif et chercher des solutions par moi-même. Ça m'a vraiment permis de consolider mes compétences en développement full-stack et de comprendre comment gérer un projet technique complet en totale autonomie.</p>
-					</div>
-				</div>
-
-				<!-- Project Web -->
-				<div class="project-card" data-category="web">
-					<h3>SAE – Application Web (Septembre 2024 - Janvier 2025)</h3>
-					<img src="images/imageSAEWeb.png" alt="Contexte SAE Application Web" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Dans le cadre de ce projet, j'ai conçu une application web complète en PHP et SQL pour gérer le suivi académique des étudiants. L'objectif principal était de créer une plateforme capable de gérer les informations liées aux étudiants, leurs résultats, et leur éligibilité à différents programmes universitaires.<br><br></p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton3">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte3" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>Ce projet visait à fournir une solution de gestion moderne pour le suivi des étudiants. Les utilisateurs peuvent entrer des informations concernant les notes des étudiants et vérifier leur éligibilité pour des programmes particuliers. La méthodologie Agile a permis une collaboration étroite avec les clients.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Mon rôle dans ce projet a été très varié. J'ai conçu et implémenté les données dans la base de données en utilisant PHP et SQL. En parallèle, j'ai participé au développement du back-end en intégrant la logique métier, tout en améliorant l'ergonomie du front-end à l'aide de HTML, CSS et JavaScript.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>PHP & SQL</strong></u> : Développement back-end.<br>• <u><strong>HTML/CSS & JavaScript</strong></u> : Création de pages dynamiques et interactives.<br>• <u><strong>Trello & Lucid</strong></u> : Outils de gestion de projet.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• Mise en œuvre des exigences des clients.<br>• Création et gestion de bases de données.<br>• Amélioration des compétences en PHP et SQL.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a permis de consolider mes compétences en développement web et en gestion de bases de données.</p>
-					</div>
-				</div>
-
-				<!-- Project Trains -->
-				<div class="project-card" data-category="logiciel">
-					<h3>SAE – Jeu de société « TRAINS » (Janvier 2024 - Juin 2024)</h3>
-					<img src="images/imageSAETrains.png" alt="Contexte SAE Trains" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de société en Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface interactive.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton2">Afficher Contexte du Projet</button>
-					</div>
-					<div id="contexte2" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de transposer un jeu de société sur ordinateur tout en respectant ses règles et sa mécanique. Les principales fonctionnalités incluent la gestion des cartes, le placement des rails et l'exécution des actions de jeu.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>Mon rôle a consisté à développer les mécanismes essentiels du jeu, y compris la gestion des cartes, le placement des rails et les interactions entre les joueurs. J'ai créé une interface utilisateur intuitive et ergonomique pour faciliter la navigation et la visualisation des actions en temps réel.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Java</strong></u> : pour le développement des mécanismes du jeu.<br>• <u><strong>JavaFX</strong></u> : pour créer une interface utilisateur fluide et interactive.<br>• <u><strong>Tests unitaires</strong></u> : pour assurer la fiabilité des fonctionnalités.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour la gestion des cartes et du plateau.<br>• <u><strong>Qualité et lisibilité du code</strong></u> : respect des bonnes pratiques.<br>• <u><strong>Ergonomie</strong></u> : mise en place d'une interface intuitive.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a permis de consolider mes compétences en Java, en développement orienté objet et en conception d'interface utilisateur.</p>
-					</div>
-				</div>
-
-				<!-- Project E3SETE -->
-				<div class="project-card" data-category="logiciel">
-					<h3>SAE E3SETE – Jeu de cartes numérique (Octobre 2023 - Décembre 2023)</h3>
-					<img src="images/ImageE3SETE.png" alt="Contexte SAE Jeu de cartes" class="image-adaptable">
-					<div class="project-intro">
-						<p style="text-indent: 0">Dans le cadre de ma formation, j'ai participé au développement d'une version numérique d'un jeu de cartes inventé par mon professeur, en utilisant Java. Ce projet m'a permis d'adopter une approche orientée objet pour modéliser le jeu et en créer une version fonctionnelle à travers une interface en ligne de commande, sans nécessiter d'interface graphique.</p>
-					</div>
-					<div class="project-actions">
-						<button id="toggleButton1">Afficher Contexte du Projet</button>
-					</div>
-					<div id ="contexte1" class="project-details" style="display:none;">
-						<p style="text-indent: 0"><strong>Contexte du projet :</strong><br>L'objectif était de transposer un jeu de cartes sur ordinateur en respectant ses règles et mécaniques, avec des fonctionnalités telles que la gestion des cartes et l'exécution des actions de jeu. La logique du jeu a été implémentée à l'aide d'algorithmes qui géraient les interactions entre les cartes et les actions des joueurs.</p>
-						<p style="text-indent: 0"><strong>Mon rôle et mes responsabilités :</strong><br>J'ai conçu et développé les mécanismes principaux du jeu, incluant la gestion des cartes, l'assignation des actions aux cartes, et la gestion de l'interaction entre les joueurs. J'ai également développé les algorithmes qui ont permis d'exécuter les actions et de gérer l'état du jeu à chaque tour.</p>
-						<p style="text-indent: 0"><strong>Technologies utilisées :</strong><br>• <u><strong>Java :</strong></u> pour la programmation orientée objet et le développement des mécanismes du jeu.<br>• <u><strong>Terminal</strong></u> : pour interagir avec le jeu sans interface graphique.<br>• <u><strong>Tests unitaires</strong></u> : pour tester les fonctionnalités du jeu et garantir sa stabilité.<br>• <u><strong>Structures de données</strong></u> : pour organiser les cartes et les actions de manière optimale.</p>
-						<p style="text-indent: 0"><strong>Compétences développées :</strong><br>• <u><strong>Conception algorithmique</strong></u> : création d'algorithmes pour gérer les mécanismes du jeu.<br>• <u><strong>Développement orienté objet</strong></u> : maîtrise de la conception modulaire.<br>• <u><strong>Tests unitaires</strong></u> : mise en place de tests pour assurer la robustesse.<br>• <u><strong>Gestion de projet</strong></u> : collaboration avec l'équipe.</p>
-						<p style="text-indent: 0"><strong>Principaux enseignements :</strong><br>Ce projet m'a permis de renforcer mes compétences en Java et en développement orienté objet, de maîtriser la gestion des interactions dans un jeu sans interface graphique, et de travailler sur l'assurance qualité.</p>
-					</div>
-				</div>
-			</div>
-
-
-		</article>
-
-		<!-- Footer -->
-		<footer class="custom-footer" style="text-align: center; color: rgba(255, 255, 255, 0.5); padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 2rem;">
-			<p class="copyright" style="font-size: 0.9rem; letter-spacing: 2px;">&copy; Corentin Martinez | Portfolio</p>
+			</ul>
 		</footer>
+
+
 	</div>
 
-	<footer id="footer">
-		<ul class="icons">
-			<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-			<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a></li>
-			<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+	<div id="bg"></div>
 
-		</ul>
-	</footer>
-
-
-</div>
-
-<div id="bg"></div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const copyEmailButtons = document.querySelectorAll('.copy-email');
-		copyEmailButtons.forEach(button => {
-			button.addEventListener('click', () => {
-				const email = button.getAttribute('data-email');
-				if (email) {
-					navigator.clipboard.writeText(email)
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyEmailButtons = document.querySelectorAll('.copy-email');
+			copyEmailButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					const email = button.getAttribute('data-email');
+					if (email) {
+						navigator.clipboard.writeText(email)
 							.then(() => {
 								alert('Email copié dans le presse-papier : ' + email);
 							})
 							.catch(err => {
 								alert('Impossible de copier l\'email : ' + err);
 							});
-				}
+					}
+				});
 			});
 		});
-	});
 
 
-	// Fonction pour basculer l'affichage du contenu avec une belle animation fluide
-	function toggleProjectDisplay(buttonId, contextId) {
-		const btn = document.getElementById(buttonId);
-		if(!btn) return;
-		btn.addEventListener("click", function() {
-			const contexte = document.getElementById(contextId);
-			if (!contexte.classList.contains("expanded")) {
-				// Ouverture
-				contexte.classList.add("expanded");
-				contexte.style.maxHeight = contexte.scrollHeight + "px";
-				this.textContent = "Cacher Contenu du Projet";
-				
-				// Libérer la max-height après l'animation pour s'adapter au redimensionnement
-				setTimeout(() => { 
-					if (contexte.classList.contains("expanded")) contexte.style.maxHeight = "none"; 
-				}, 500);
-			} else {
-				// Fermeture
-				contexte.style.maxHeight = contexte.scrollHeight + "px"; // Forcer la valeur en pixels
-				void contexte.offsetHeight; // Forcer le reflow du navigateur
-				contexte.classList.remove("expanded");
-				contexte.style.maxHeight = "0px";
-				this.textContent = "Afficher Contexte du Projet";
-			}
-		});
-	}
+		// Fonction pour basculer l'affichage du contenu avec une belle animation fluide
+		function toggleProjectDisplay(buttonId, contextId) {
+			const btn = document.getElementById(buttonId);
+			if (!btn) return;
+			btn.addEventListener("click", function () {
+				const contexte = document.getElementById(contextId);
+				if (!contexte.classList.contains("expanded")) {
+					// Ouverture
+					contexte.classList.add("expanded");
+					contexte.style.maxHeight = contexte.scrollHeight + "px";
+					this.textContent = "Cacher Contenu du Projet";
 
-	// Fonction pour basculer l'affichage du contenu (compétences)
-	function toggleProjectDisplay2(buttonId, contextId) {
-		const btn = document.getElementById(buttonId);
-		if(!btn) return;
-		btn.addEventListener("click", function() {
-			const contexte = document.getElementById(contextId);
-			if (!contexte.classList.contains("expanded")) {
-				contexte.classList.add("expanded");
-				contexte.style.maxHeight = contexte.scrollHeight + "px";
-				this.textContent = "Cacher détaille compétence";
-				setTimeout(() => { 
-					if (contexte.classList.contains("expanded")) contexte.style.maxHeight = "none"; 
-				}, 500);
-			} else {
-				contexte.style.maxHeight = contexte.scrollHeight + "px";
-				void contexte.offsetHeight;
-				contexte.classList.remove("expanded");
-				contexte.style.maxHeight = "0px";
-				this.textContent = "Afficher détaille compétence";
-			}
-		});
-	}
-
-
-
-	// Appliquer la fonction à chaque bouton pour les deux projets
-	toggleProjectDisplay("toggleButton1", "contexte1");
-	toggleProjectDisplay("toggleButton2", "contexte2");
-	toggleProjectDisplay("toggleButton3", "contexte3");
-	toggleProjectDisplay2("toggleButton4", "contexte4");
-	toggleProjectDisplay2("toggleButton5", "contexte5");
-	toggleProjectDisplay2("toggleButton6", "contexte6");
-
-	// Nouveaux projets ajoutés
-	toggleProjectDisplay("toggleButton7", "contexte7"); // Météo
-	toggleProjectDisplay("toggleButton8", "contexte8"); // Avatar
-	toggleProjectDisplay("toggleButton9", "contexte9"); // Critiques
-	toggleProjectDisplay("toggleButton10", "contexte10"); // Poker
-	toggleProjectDisplay("toggleButton11", "contexte11"); // Orbital
-	toggleProjectDisplay("toggleButtonStage", "contexteStage"); // Stage
-
-	// Système de filtrage des projets
-	const filterBtns = document.querySelectorAll('.filter-btn');
-	const projectCards = document.querySelectorAll('.project-card');
-
-	filterBtns.forEach(btn => {
-		btn.addEventListener('click', () => {
-			// Gestion des boutons actifs
-			filterBtns.forEach(b => b.classList.remove('active'));
-			btn.classList.add('active');
-
-			const filterValue = btn.getAttribute('data-filter');
-
-			// Filtrage des cartes
-			projectCards.forEach(card => {
-				if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-					card.style.display = 'flex';
+					// Libérer la max-height après l'animation pour s'adapter au redimensionnement
+					setTimeout(() => {
+						if (contexte.classList.contains("expanded")) contexte.style.maxHeight = "none";
+					}, 500);
 				} else {
-					card.style.display = 'none';
+					// Fermeture
+					contexte.style.maxHeight = contexte.scrollHeight + "px"; // Forcer la valeur en pixels
+					void contexte.offsetHeight; // Forcer le reflow du navigateur
+					contexte.classList.remove("expanded");
+					contexte.style.maxHeight = "0px";
+					this.textContent = "Afficher Contexte du Projet";
 				}
 			});
-		});
-	});
+		}
 
-</script>
+		// Fonction pour basculer l'affichage du contenu (compétences)
+		function toggleProjectDisplay2(buttonId, contextId) {
+			const btn = document.getElementById(buttonId);
+			if (!btn) return;
+			btn.addEventListener("click", function () {
+				const contexte = document.getElementById(contextId);
+				if (!contexte.classList.contains("expanded")) {
+					contexte.classList.add("expanded");
+					contexte.style.maxHeight = contexte.scrollHeight + "px";
+					this.textContent = "Cacher détaille compétence";
+					setTimeout(() => {
+						if (contexte.classList.contains("expanded")) contexte.style.maxHeight = "none";
+					}, 500);
+				} else {
+					contexte.style.maxHeight = contexte.scrollHeight + "px";
+					void contexte.offsetHeight;
+					contexte.classList.remove("expanded");
+					contexte.style.maxHeight = "0px";
+					this.textContent = "Afficher détaille compétence";
+				}
+			});
+		}
+
+
+
+		// Appliquer la fonction à chaque bouton pour les deux projets
+		toggleProjectDisplay("toggleButton1", "contexte1");
+		toggleProjectDisplay("toggleButton2", "contexte2");
+		toggleProjectDisplay("toggleButton3", "contexte3");
+		toggleProjectDisplay2("toggleButton4", "contexte4");
+		toggleProjectDisplay2("toggleButton5", "contexte5");
+		toggleProjectDisplay2("toggleButton6", "contexte6");
+
+		// Nouveaux projets ajoutés
+		toggleProjectDisplay("toggleButton7", "contexte7"); // Météo
+		toggleProjectDisplay("toggleButton8", "contexte8"); // Avatar
+		toggleProjectDisplay("toggleButton9", "contexte9"); // Critiques
+		toggleProjectDisplay("toggleButton10", "contexte10"); // Poker
+		toggleProjectDisplay("toggleButton11", "contexte11"); // Orbital
+		toggleProjectDisplay("toggleButtonStage", "contexteStage"); // Stage
+
+		// Système de filtrage des projets
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const projectCards = document.querySelectorAll('.project-card');
+
+		filterBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				// Gestion des boutons actifs
+				filterBtns.forEach(b => b.classList.remove('active'));
+				btn.classList.add('active');
+
+				const filterValue = btn.getAttribute('data-filter');
+
+				// Filtrage des cartes
+				projectCards.forEach(card => {
+					if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+						card.style.display = 'flex';
+					} else {
+						card.style.display = 'none';
+					}
+				});
+			});
+		});
+
+	</script>
 
 
 </body>
+
 </html>
