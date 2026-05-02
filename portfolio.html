@@ -1,24 +1,27 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Site Corentin Martinez</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 	<div id="google_translate_element"></div>
 
 	<script type="text/javascript">
 		function googleTranslateElementInit() {
 			new google.translate.TranslateElement(
-					{ pageLanguage: 'fr' },
-					'google_translate_element'
+				{ pageLanguage: 'fr' },
+				'google_translate_element'
 			);
 		}
 	</script>
 	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-	<style>
+		<style>
 		/* Styles pour garantir que les boutons ne cassent pas */
 		.project-actions button,
 		button[id^="toggleButton"] {
@@ -28,53 +31,183 @@
 			padding: 0.5rem 1rem !important;
 			line-height: 1.2 !important;
 		}
+
+		/* Nouvel agencement pour les compétences (Accordion/Cards) */
+		.competences-container {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			margin-top: 30px;
+			margin-bottom: 40px;
+		}
+
+		.competence-card {
+			background: rgba(255, 255, 255, 0.03);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 12px;
+			padding: 25px 30px;
+			transition: all 0.3s ease;
+		}
+
+		.competence-card:hover {
+			background: rgba(255, 255, 255, 0.05);
+			border-color: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+		}
+
+		.competence-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.competence-header h3 {
+			margin: 0;
+			font-size: 1.25rem;
+			border-bottom: none;
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+		}
+
+		.competence-toggle-icon {
+			font-size: 1.5rem;
+			font-weight: bold;
+			transition: transform 0.3s ease;
+			color: rgba(255, 255, 255, 0.5);
+			width: 35px;
+			height: 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background: rgba(255,255,255,0.05);
+		}
+
+		.competence-card.active .competence-toggle-icon {
+			transform: rotate(45deg);
+			background: rgba(255,255,255,0.1);
+			color: #fff;
+		}
+
+		.competence-content {
+			max-height: 0;
+			overflow: hidden;
+			opacity: 0;
+			transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease, padding-top 0.3s ease;
+			margin-top: 0;
+		}
+
+		.competence-content.expanded {
+			margin-top: 25px;
+			padding-top: 25px;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			opacity: 1;
+		}
+
+		.competence-content p {
+			text-indent: 0 !important;
+			margin-bottom: 1.2rem;
+			line-height: 1.6;
+			font-size: 0.95rem;
+		}
+
+		.competence-content h4 {
+			margin-top: 30px;
+			margin-bottom: 15px;
+			color: #4da6ff;
+		}
 	</style>
 
 </head>
+
 <body class="is-preload">
 
-<div id="wrapper">
+	<div id="wrapper">
 
-	<header id="header">
-		<div class="logo">
-			<img src="images/image.jpg" alt="Logo">
-		</div>
-		<div class="content">
-			<div class="inner">
-				<h1>Martinez Corentin</h1>
-				<p>Une personne attentive et prête à vous écouter</p>
+		<header id="header">
+			<div class="logo">
+				<img src="images/image.jpg" alt="Logo">
 			</div>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="apropos.html#about">A propos</a></li>
-				<li><a href="projets.html#work">Projets</a></li>
-				<li><a href="capacites.html#capacites">Capacités</a></li>
-				<li><a href="portfolio.html#portfolioApprentissage" class="active-page-link">Portfolio</a></li>
-				<li><a href="contact.html#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+			<div class="content">
+				<div class="inner">
+					<h1>Martinez Corentin</h1>
+					<p>Une personne attentive et prête à vous écouter</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="apropos.html#about">A propos</a></li>
+					<li><a href="projets.html#work">Projets</a></li>
+					<li><a href="capacites.html#capacites">Capacités</a></li>
+					<li><a href="portfolio.html#portfolioApprentissage" class="active-page-link">Portfolio</a></li>
+					<li><a href="contact.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<div id="main">
-		<article id="portfolioApprentissage">
-					<nav class="article-nav" style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;"><a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about" style="border-bottom:none">A propos</a><a href="projets.html#work" style="border-bottom:none">Projets</a><a href="capacites.html#capacites" style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage" class="active-page-link" style="border-bottom:none">Portfolio</a><a href="contact.html#contact" style="border-bottom:none">Contact</a></nav>
+		<div id="main">
+			<article id="portfolioApprentissage">
+				<nav class="article-nav"
+					style="display:flex; justify-content:center; gap:15px; flex-wrap:nowrap; gap:10px; white-space:nowrap; overflow-x:auto; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:15px; margin-bottom:20px;">
+					<a href="index.html" style="border-bottom:none">Accueil</a><a href="apropos.html#about"
+						style="border-bottom:none">A propos</a><a href="projets.html#work"
+						style="border-bottom:none">Projets</a><a href="capacites.html#capacites"
+						style="border-bottom:none">Capacités</a><a href="portfolio.html#portfolioApprentissage"
+						class="active-page-link" style="border-bottom:none">Portfolio</a><a href="contact.html#contact"
+						style="border-bottom:none">Contact</a></nav>
 
-			<section>
-				<h3>💻 Compétence 1 – Réaliser un développement d'application</h3>
-				<button id="toggleButton1">Afficher détaille Compétence</button>
-				<div id ="contexte1" style="display: none"><br>
-					<p style="text-indent: 50px">
-						Dans le cadre de mon parcours académique, j'ai appréhendé le cycle de vie logiciel dans son intégralité, de l'analyse initiale des besoins métiers jusqu'à la phase cruciale de livraison. Mon approche s'est structurée autour de l'application rigoureuse du paradigme MVC (Modèle-Vue-Contrôleur), garantissant une séparation stricte entre la logique métier et les interfaces de présentation. Cette architecture n'est pas seulement un choix technique, mais une stratégie délibérée pour assurer l'interopérabilité, la maintenabilité et la scalabilité de mes applications au fil des évolutions fonctionnelles.					</p>
-					<p style="text-indent: 50px">
-						L’exigence de qualité logicielle a été le fil conducteur de mes réalisations. Au-delà de l'aspect purement visuel et ergonomique de l'interface utilisateur, j'ai mis un point d'honneur à la robustesse du code. Pour ce faire, j'ai systématisé l'usage de tests unitaires et de l'intégration continue, permettant de fiabiliser les déploiements et de prévenir toute régression lors de l'ajout de nouvelles fonctionnalités. Cette démarche m'a permis de construire des bases de code saines, documentées et facilement réutilisables par des tiers.					</p>
-					<p style="text-indent: 50px">
-						Enfin, ma polyvalence technologique m'a permis d'adapter mes choix d'outils aux contraintes spécifiques de chaque projet. Qu'il s'agisse de scripting de moteurs de jeu sous Java ou de développement de modules de gestion en PHP, j'ai toujours veillé à une rédaction de code propre (Clean Code) et à une documentation technique exhaustive. Cette rigueur méthodologique assure non seulement la pérennité de l'outil développé, mais facilite également le transfert de compétences et la reprise du projet en environnement collaboratif.					</p>
+				
 
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>Pour illustrer mon engagement sur l'exigence de qualité (tests et principes objet), voici un exemple en Scala démontrant l'évaluation algorithmique du calculateur de Poker couplée à une logique fonctionnelle immuable :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+				
+
+				
+
+				
+
+				
+
+				
+				<div class="competences-container">
+					<div class="competence-card" id="card_contexte1">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte1', 'card_contexte1')">
+							<h3>💻 Compétence 1 – Réaliser un développement d'application</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte1" class="competence-content">
+							<p style="text-indent: 50px">
+							Dans le cadre de mon parcours académique, j'ai appréhendé le cycle de vie logiciel dans son
+							intégralité, de l'analyse initiale des besoins métiers jusqu'à la phase cruciale de
+							livraison. Mon approche s'est structurée autour de l'application rigoureuse du paradigme MVC
+							(Modèle-Vue-Contrôleur), garantissant une séparation stricte entre la logique métier et les
+							interfaces de présentation. Cette architecture n'est pas seulement un choix technique, mais
+							une stratégie délibérée pour assurer l'interopérabilité, la maintenabilité et la scalabilité
+							de mes applications au fil des évolutions fonctionnelles. </p>
+						<p style="text-indent: 50px">
+							L’exigence de qualité logicielle a été le fil conducteur de mes réalisations. Au-delà de
+							l'aspect purement visuel et ergonomique de l'interface utilisateur, j'ai mis un point
+							d'honneur à la robustesse du code. Pour ce faire, j'ai systématisé l'usage de tests
+							unitaires et de l'intégration continue, permettant de fiabiliser les déploiements et de
+							prévenir toute régression lors de l'ajout de nouvelles fonctionnalités. Cette démarche m'a
+							permis de construire des bases de code saines, documentées et facilement réutilisables par
+							des tiers. </p>
+						<p style="text-indent: 50px">
+							Enfin, ma polyvalence technologique m'a permis d'adapter mes choix d'outils aux contraintes
+							spécifiques de chaque projet. Qu'il s'agisse de scripting de moteurs de jeu sous Java ou de
+							développement de modules de gestion en PHP, j'ai toujours veillé à une rédaction de code
+							propre (Clean Code) et à une documentation technique exhaustive. Cette rigueur
+							méthodologique assure non seulement la pérennité de l'outil développé, mais facilite
+							également le transfert de compétences et la reprise du projet en environnement collaboratif.
+						</p>
+
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>Pour illustrer mon engagement sur l'exigence de qualité (tests et principes objet), voici un
+							exemple en Scala démontrant l'évaluation algorithmique du calculateur de Poker couplée à une
+							logique fonctionnelle immuable :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 // Extrait de l'application Poker (Architecture Fonctionnelle)
 def evaluerMain(cartes: List[Carte]): Combinaison = {
   require(cartes.length == 5, "Une main doit contenir exactement 5 cartes")
@@ -89,22 +222,41 @@ def evaluerMain(cartes: List[Carte]): Combinaison = {
   }
 }
 </code></pre>
-				</div>
-			</section>
-
-			<section>
-				<h3>⚡ Compétence 2 – Optimiser des applications</h3>
-				<button id="toggleButton2">Afficher détaille Compétence</button>
-				<div id ="contexte2" style="display: none"><br>
-					<p style="text-indent: 50px">
-						L'optimisation des performances est rapidement devenue un enjeu central de ma pratique, dépassant la simple nécessité fonctionnelle pour tendre vers l'efficience algorithmique. J'ai développé une capacité d'analyse critique me permettant d'évaluer la complexité temporelle et spatiale de mes scripts. Face à l'accroissement des volumes de données traitées, j'ai appris à substituer des structures de données naïves par des architectures plus performantes (tableaux associatifs, sets, arbres), réduisant ainsi de manière drastique les temps de réponse et la charge processeur.					</p>
-					<p style="text-indent: 50px">
-						Cette quête d'optimisation s'est particulièrement illustrée dans la gestion de flux de données en temps réel. Plutôt que de subir une exécution linéaire coûteuse, j'ai mis en œuvre des mécanismes de filtrage préventif et de traitement asynchrone pour écarter les données redondantes dès l'entrée du pipeline. Ces techniques de "pruning" et de gestion fine de la mémoire ne répondent pas seulement à une exigence de fluidité, mais s'inscrivent également dans une démarche d'éco-conception, où chaque cycle CPU économisé participe à la réduction de l'empreinte énergétique de l'infrastructure numérique.					</p>
-					<p style="text-indent: 50px">
-						En intégrant ces contraintes de performance dès la phase de conception, j'ai su transformer des goulots d'étranglement potentiels en avantages compétitifs. Cette compétence m'a permis de livrer des applications capables de supporter une montée en charge sans dégradation de l'expérience utilisateur, tout en garantissant une stabilité exemplaire du système en environnement de production.
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>Optimisation du traitement de proximité dans un jeu 2D via une réduction intelligente des comparaisons grâce au filtrage de sous-ensembles :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+						</div>
+					</div>
+					<div class="competence-card" id="card_contexte2">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte2', 'card_contexte2')">
+							<h3>⚡ Compétence 2 – Optimiser des applications</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte2" class="competence-content">
+							<p style="text-indent: 50px">
+							L'optimisation des performances est rapidement devenue un enjeu central de ma pratique,
+							dépassant la simple nécessité fonctionnelle pour tendre vers l'efficience algorithmique.
+							J'ai développé une capacité d'analyse critique me permettant d'évaluer la complexité
+							temporelle et spatiale de mes scripts. Face à l'accroissement des volumes de données
+							traitées, j'ai appris à substituer des structures de données naïves par des architectures
+							plus performantes (tableaux associatifs, sets, arbres), réduisant ainsi de manière drastique
+							les temps de réponse et la charge processeur. </p>
+						<p style="text-indent: 50px">
+							Cette quête d'optimisation s'est particulièrement illustrée dans la gestion de flux de
+							données en temps réel. Plutôt que de subir une exécution linéaire coûteuse, j'ai mis en
+							œuvre des mécanismes de filtrage préventif et de traitement asynchrone pour écarter les
+							données redondantes dès l'entrée du pipeline. Ces techniques de "pruning" et de gestion fine
+							de la mémoire ne répondent pas seulement à une exigence de fluidité, mais s'inscrivent
+							également dans une démarche d'éco-conception, où chaque cycle CPU économisé participe à la
+							réduction de l'empreinte énergétique de l'infrastructure numérique. </p>
+						<p style="text-indent: 50px">
+							En intégrant ces contraintes de performance dès la phase de conception, j'ai su transformer
+							des goulots d'étranglement potentiels en avantages compétitifs. Cette compétence m'a permis
+							de livrer des applications capables de supporter une montée en charge sans dégradation de
+							l'expérience utilisateur, tout en garantissant une stabilité exemplaire du système en
+							environnement de production.
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>Optimisation du traitement de proximité dans un jeu 2D via une réduction intelligente des
+							comparaisons grâce au filtrage de sous-ensembles :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 // Algorithme ciblé de résolution pour entités (Optimisé)
 function findClosestTarget(bot, entities) {
     let bestTarget = null;
@@ -123,26 +275,46 @@ function findClosestTarget(bot, entities) {
     return bestTarget;
 }
 </code></pre>
-				</div>
-			</section>
+						</div>
+					</div>
+					<div class="competence-card" id="card_contexte5">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte5', 'card_contexte5')">
+							<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte5" class="competence-content">
+							<p style="text-indent: 50px">
+							Dans le cadre de cette compétence, j'ai particulièrement veillé à respecter les standards de
+							développement web en structurant mon travail avec une architecture MVC claire. En cas
+							d'évolution du projet, tout le socle technique est scrupuleusement documenté et versionné
+							sur GitHub, m'appuyant sur un script Docker propre pour assurer un redéploiement local très
+							rapide. Le serveur web a ainsi été déployé en local via l'écosystème Docker, où j'ai pu
+							créer et configurer en toute autonomie des conteneurs dédiés pour Apache, PHP et MySQL, en
+							modulant minutieusement les ports, les volumes et les divers services nécessaires.
+						</p>
+						<p style="text-indent: 50px">
+							Sur le plan de l'optimisation, le site a été conçu pour garantir un affichage véloce en
+							environnement local, avec un code scrupuleusement allégé et des requêtes SQL dûment
+							optimisées. J'y ai aussi intégré un protocole HTTPS et des règles de configuration
+							<code>.htaccess</code> pour interdire l'accès à certaines pages critiques et dossiers du
+							serveur. Du point de vue fonctionnel, un formulaire de contact dynamique a été implémenté en
+							PHP et JavaScript, capable d'acheminer des messages via la librairie <em>PHPMailer</em>
+							grâce à la simulation d'un serveur mail local.
+						</p>
+						<p style="text-indent: 50px">
+							La sécurité a été un fil conducteur majeur. L'ensemble des mots de passe sont hachés
+							rigoureusement et la protection des formulaires se fait doublement, côté client et côté
+							serveur. J'ai par ailleurs mis en place une fonctionnalité critique de réinitialisation de
+							mot de passe hautement sécurisée, nécessitant impérativement une vérification stricte de
+							l'adresse e-mail couplée à un token temporaire, tout en appliquant des méthodes de
+							désinfection (sanitization) afin de pallier toute attaque par injection.
+						</p>
 
-			<section>
-				<h3>🛠️ Compétence 3 – Administrer un système informatique</h3>
-				<button id="toggleButton5">Afficher détaille Compétence</button>
-				<div id ="contexte5" style="display: none"><br>
-					<p style="text-indent: 50px">
-						Dans le cadre de cette compétence, j'ai particulièrement veillé à respecter les standards de développement web en structurant mon travail avec une architecture MVC claire. En cas d'évolution du projet, tout le socle technique est scrupuleusement documenté et versionné sur GitHub, m'appuyant sur un script Docker propre pour assurer un redéploiement local très rapide. Le serveur web a ainsi été déployé en local via l'écosystème Docker, où j'ai pu créer et configurer en toute autonomie des conteneurs dédiés pour Apache, PHP et MySQL, en modulant minutieusement les ports, les volumes et les divers services nécessaires.
-					</p>
-					<p style="text-indent: 50px">
-						Sur le plan de l'optimisation, le site a été conçu pour garantir un affichage véloce en environnement local, avec un code scrupuleusement allégé et des requêtes SQL dûment optimisées. J'y ai aussi intégré un protocole HTTPS et des règles de configuration <code>.htaccess</code> pour interdire l'accès à certaines pages critiques et dossiers du serveur. Du point de vue fonctionnel, un formulaire de contact dynamique a été implémenté en PHP et JavaScript, capable d'acheminer des messages via la librairie <em>PHPMailer</em> grâce à la simulation d'un serveur mail local.
-					</p>
-					<p style="text-indent: 50px">
-						La sécurité a été un fil conducteur majeur. L'ensemble des mots de passe sont hachés rigoureusement et la protection des formulaires se fait doublement, côté client et côté serveur. J'ai par ailleurs mis en place une fonctionnalité critique de réinitialisation de mot de passe hautement sécurisée, nécessitant impérativement une vérification stricte de l'adresse e-mail couplée à un token temporaire, tout en appliquant des méthodes de désinfection (sanitization) afin de pallier toute attaque par injection.
-					</p>
-
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>Voici un extrait représentatif de mon processus de déploiement (configuration Docker typique) permettant une mise en place standardisée et indépendante de l'architecture physique :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>Voici un extrait représentatif de mon processus de déploiement (configuration Docker typique)
+							permettant une mise en place standardisée et indépendante de l'architecture physique :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 version: '3.8'
 services:
   web:
@@ -157,26 +329,49 @@ services:
       MYSQL_ROOT_PASSWORD: my-secret-pw
       MYSQL_DATABASE: portfolio_db
 </code></pre>
-				</div>
-			</section>
+						</div>
+					</div>
+					<div class="competence-card" id="card_contexte6">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte6', 'card_contexte6')">
+							<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte6" class="competence-content">
+							<p style="text-indent: 50px">
+							Dans l'approche globale de gestion des données, le développement s'est articulé autour d'une
+							optique de sécurité renforcée et d'intégrité de l'information. Partant de là, l'ensemble des
+							données dites "sensibles" sont systématiquement protégées par le recours au hachage
+							unidirectionnel, interdisant tout stockage à visée non consentie et intégrant
+							intrinsèquement une option de suppression de compte conforme au droit à l'effacement. J'ai
+							activement paré à toute tentative malveillante par cross-site scripting (XSS) via une
+							minutieuse vérification à l'entrée et à tout risque d'injection SQL par un fort usage de
+							requêtes paramétrées.
+						</p>
+						<p style="text-indent: 50px">
+							Au niveau architectural, l'élaboration de la base de données a été précédée par un rigoureux
+							parcours logique de modélisation, avec la construction d'un Modèle Conceptuel de Données
+							(MCD), puis son évolution en Modèle Physique des Données (MPD) via l'outil MySQL Workbench.
+							Ces étapes, soutenues par mes connaissances en logique relationnelle et en algèbre des
+							ensembles, ont été fondamentales pour modéliser précisément les interdépendances entre
+							utilisateurs, produits livrés, et bons de commandes, de manière optimale et dénuée
+							d'anomalies structurelles.
+						</p>
+						<p style="text-indent: 50px">
+							Conséquence de cet exercice de modélisation, la normalisation avancée et validée (jusqu'en
+							3ème forme normale, 3FN) constitue l'assise essentielle de cette infrastructure. Les clés
+							primaires et les contraintes de clés étrangères orchestrent la cohérence relationnelle et
+							conjurent tout risque de doublons asynchrones. Finalement, ce socle optimisé limite au
+							strict minimum l'empreinte disque en écartant radicalement la redondance ; j'ai par
+							conséquent veillé à retenir des typologies de données strictement adaptées à l'expression de
+							nos besoins, ouvrant la voie à un hébergement respectueux de la contrainte environnementale.
+						</p>
 
-			<section>
-				<h3>🗃️ Compétence 4 – Gérer des données de l’entreprise</h3>
-				<button id="toggleButton6">Afficher détaille Compétence</button>
-				<div id ="contexte6" style="display: none"><br>
-					<p style="text-indent: 50px">
-						Dans l'approche globale de gestion des données, le développement s'est articulé autour d'une optique de sécurité renforcée et d'intégrité de l'information. Partant de là, l'ensemble des données dites "sensibles" sont systématiquement protégées par le recours au hachage unidirectionnel, interdisant tout stockage à visée non consentie et intégrant intrinsèquement une option de suppression de compte conforme au droit à l'effacement. J'ai activement paré à toute tentative malveillante par cross-site scripting (XSS) via une minutieuse vérification à l'entrée et à tout risque d'injection SQL par un fort usage de requêtes paramétrées.
-					</p>
-					<p style="text-indent: 50px">
-						Au niveau architectural, l'élaboration de la base de données a été précédée par un rigoureux parcours logique de modélisation, avec la construction d'un Modèle Conceptuel de Données (MCD), puis son évolution en Modèle Physique des Données (MPD) via l'outil MySQL Workbench. Ces étapes, soutenues par mes connaissances en logique relationnelle et en algèbre des ensembles, ont été fondamentales pour modéliser précisément les interdépendances entre utilisateurs, produits livrés, et bons de commandes, de manière optimale et dénuée d'anomalies structurelles.
-					</p>
-					<p style="text-indent: 50px">
-						Conséquence de cet exercice de modélisation, la normalisation avancée et validée (jusqu'en 3ème forme normale, 3FN) constitue l'assise essentielle de cette infrastructure. Les clés primaires et les contraintes de clés étrangères orchestrent la cohérence relationnelle et conjurent tout risque de doublons asynchrones. Finalement, ce socle optimisé limite au strict minimum l'empreinte disque en écartant radicalement la redondance ; j'ai par conséquent veillé à retenir des typologies de données strictement adaptées à l'expression de nos besoins, ouvrant la voie à un hébergement respectueux de la contrainte environnementale.
-					</p>
-
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>La normalisation s'illustre particulièrement au travers de requêtes de création (DDL) qui mettent en évidence l'emploi de contraintes solides respectant l'intégrité de la base de données :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>La normalisation s'illustre particulièrement au travers de requêtes de création (DDL) qui
+							mettent en évidence l'emploi de contraintes solides respectant l'intégrité de la base de
+							données :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 CREATE TABLE produit (
     id_produit INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
@@ -187,26 +382,53 @@ CREATE TABLE produit (
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 </code></pre>
-				</div>
-			</section>
+						</div>
+					</div>
+					<div class="competence-card" id="card_contexte4">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte4', 'card_contexte4')">
+							<h3>🧭 Compétence 5 – Conduire un projet</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte4" class="competence-content">
+							<p style="text-indent: 50px">
+							Dans le souci de construire un outil en adéquation parfaite avec son environnement
+							professionnel, j'ai débuté l'analyse du projet informatique par une étude minutieuse des
+							différents processus stratégiques et opérationnels, à savoir : la facturation, l'historique
+							de commandes, ou l'organisation de relations clients récurrentes. Ces démarches se sont
+							prolongées au sein de nombreuses réunions avec la direction, mon tuteur et le pôle
+							commercial. Cette concertation continue - marque d'une conception agile - m'a permis
+							d'aligner la conception de mon module e-commerce avec les attentes concrètes de la société
+							et d'une diversité d'utilisateurs métiers, depuis les clients locaux jusqu'aux visiteurs de
+							passage.
+						</p>
+						<p style="text-indent: 50px">
+							À travers chaque itération, force a été de constater des ajustements parfois spontanés,
+							nécessitant de réelles facultés d'adaptation. À titre d'exemple, j'ai eu l'opportunité de
+							formuler des initiatives non exprimées au départ : le déploiement d'une procédure
+							additionnelle de réinitialisation des accès en cas de perte de compte, ou bien l'engagement
+							dans une refonte graphique modernisée sur fond de teintes bleutées. J'y ai également
+							démontré ma capacité de projection dans l'élaboration du cahier des charges dont découlait
+							une gestion de projet séquencée, encadrée par un pilotage sous Trello (sprints), assurant
+							continûment la validation de chacun de mes rendus d’une borne temporelle à l'autre.
+						</p>
+						<p style="text-indent: 50px">
+							Bien sûr, de tels développements supposent avant tout une analyse très rigoureuse des
+							ressources et contraintes techniques, qu'elles soient temporelles, matérielles, ou même
+							règlementaires. C'est en étudiant cette conjoncture par une méthode du type MVC que j'ai pu
+							identifier un juste équilibre. En tant qu'opérateur conscient, j'ai inscrit mes choix de
+							développement sous le prisme de l'accessibilité cognitive, permettant au plus grand nombre
+							la consultation facilitée du projet, tout en assumant fermement nos obligations
+							règlementaires. Le respect indéniable des articles du RGPD est ici central ; un traitement
+							scrupuleux des identifiants hashés et la parution obligatoire des mentions légales ont de
+							fait encadré le dépôt en ligne formel du projet.
+						</p>
 
-			<section>
-				<h3>🧭 Compétence 5 – Conduire un projet</h3>
-				<button id="toggleButton4">Afficher détaille Compétence</button>
-				<div id ="contexte4" style="display: none"><br>
-					<p style="text-indent: 50px">
-						Dans le souci de construire un outil en adéquation parfaite avec son environnement professionnel, j'ai débuté l'analyse du projet informatique par une étude minutieuse des différents processus stratégiques et opérationnels, à savoir : la facturation, l'historique de commandes, ou l'organisation de relations clients récurrentes. Ces démarches se sont prolongées au sein de nombreuses réunions avec la direction, mon tuteur et le pôle commercial. Cette concertation continue - marque d'une conception agile - m'a permis d'aligner la conception de mon module e-commerce avec les attentes concrètes de la société et d'une diversité d'utilisateurs métiers, depuis les clients locaux jusqu'aux visiteurs de passage.
-					</p>
-					<p style="text-indent: 50px">
-						À travers chaque itération, force a été de constater des ajustements parfois spontanés, nécessitant de réelles facultés d'adaptation. À titre d'exemple, j'ai eu l'opportunité de formuler des initiatives non exprimées au départ : le déploiement d'une procédure additionnelle de réinitialisation des accès en cas de perte de compte, ou bien l'engagement dans une refonte graphique modernisée sur fond de teintes bleutées. J'y ai également démontré ma capacité de projection dans l'élaboration du cahier des charges dont découlait une gestion de projet séquencée, encadrée par un pilotage sous Trello (sprints), assurant continûment la validation de chacun de mes rendus d’une borne temporelle à l'autre.
-					</p>
-					<p style="text-indent: 50px">
-						Bien sûr, de tels développements supposent avant tout une analyse très rigoureuse des ressources et contraintes techniques, qu'elles soient temporelles, matérielles, ou même règlementaires. C'est en étudiant cette conjoncture par une méthode du type MVC que j'ai pu identifier un juste équilibre. En tant qu'opérateur conscient, j'ai inscrit mes choix de développement sous le prisme de l'accessibilité cognitive, permettant au plus grand nombre la consultation facilitée du projet, tout en assumant fermement nos obligations règlementaires. Le respect indéniable des articles du RGPD est ici central ; un traitement scrupuleux des identifiants hashés et la parution obligatoire des mentions légales ont de fait encadré le dépôt en ligne formel du projet.
-					</p>
-
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>Illustration des contraintes projet identifiées via la définition d'un modèle abstrait (diagramme de cas d'utilisation simplifié) montrant l'interaction entre les différents acteurs du système :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>Illustration des contraintes projet identifiées via la définition d'un modèle abstrait
+							(diagramme de cas d'utilisation simplifié) montrant l'interaction entre les différents
+							acteurs du système :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 Actors:
   - Client Non Identifié
   - Client Identifié
@@ -219,22 +441,42 @@ Use Cases:
   [Administrateur] --> (Gérer les utilisateurs)
   (Passer une commande) ..> (S'authentifier) : <<include>>
 </code></pre>
-				</div>
-			</section>
-
-			<section>
-				<h3>🤝 Compétence 6 – Collaborer au sein d'une équipe informatique</h3>
-				<button id="toggleButton3">Afficher détaille Compétence</button>
-				<div id ="contexte3" style="display: none"><br>
-					<p style="text-indent: 50px">
-						La collaboration au sein d'un écosystème informatique est une compétence transverse que j'ai consolidée à travers les diverses Situations d'Apprentissage et d'Évaluation (SAE). J'ai intégré le fait que la réussite d'un projet complexe repose sur une synergie entre expertise technique et gouvernance humaine. En adoptant les méthodes agiles (Scrum), j'ai activement participé à la définition des backlogs, à la planification des sprints et aux revues de projet, assurant ainsi une synchronisation constante entre les objectifs stratégiques et les développements techniques.					</p>
-					<p style="text-indent: 50px">
-						Le pilotage de projets multi-contributeurs m'a conduit à maîtriser les flux de travail avancés avec l'outil de versionnement Git. Au-delà du simple stockage de code, j'ai mis en œuvre des stratégies de branchement rigoureuses (GitFlow), facilitant le développement parallèle de fonctionnalités tout en minimisant les risques de conflits lors des fusions (merges). Mon implication s'est également traduite par une attention particulière portée à la qualité des messages de commit et à la revue de code par les pairs, garantissant l'homogénéité et la qualité du dépôt commun.					</p>
-					<p style="text-indent: 50px">
-						Enfin, j'ai toujours favorisé une communication transparente et inclusive au sein de mes équipes. En assumant alternativement des rôles de lead technique ou de contributeur spécialisé, j'ai appris à arbitrer les choix technologiques de manière collégiale et à documenter les décisions d'architecture. Cette intelligence collective est, selon moi, le moteur essentiel pour surmonter les points de blocage complexes et garantir la livraison d'un produit qui dépasse la simple somme des compétences individuelles.
-					<h4>🔍 Preuve de réalisation</h4>
-					<p>Pour ancrer cet outil coopératif en temps réel, voici une de mes habitudes professionnelles illustrant un cycle de contribution asynchrone maîtrisé sous Git :</p>
-					<pre style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
+						</div>
+					</div>
+					<div class="competence-card" id="card_contexte3">
+						<div class="competence-header" onclick="toggleCompetenceNew('contexte3', 'card_contexte3')">
+							<h3>🤝 Compétence 6 – Collaborer au sein d'une équipe informatique</h3>
+							<span class="competence-toggle-icon">+</span>
+						</div>
+						<div id="contexte3" class="competence-content">
+							<p style="text-indent: 50px">
+							La collaboration au sein d'un écosystème informatique est une compétence transverse que j'ai
+							consolidée à travers les diverses Situations d'Apprentissage et d'Évaluation (SAE). J'ai
+							intégré le fait que la réussite d'un projet complexe repose sur une synergie entre expertise
+							technique et gouvernance humaine. En adoptant les méthodes agiles (Scrum), j'ai activement
+							participé à la définition des backlogs, à la planification des sprints et aux revues de
+							projet, assurant ainsi une synchronisation constante entre les objectifs stratégiques et les
+							développements techniques. </p>
+						<p style="text-indent: 50px">
+							Le pilotage de projets multi-contributeurs m'a conduit à maîtriser les flux de travail
+							avancés avec l'outil de versionnement Git. Au-delà du simple stockage de code, j'ai mis en
+							œuvre des stratégies de branchement rigoureuses (GitFlow), facilitant le développement
+							parallèle de fonctionnalités tout en minimisant les risques de conflits lors des fusions
+							(merges). Mon implication s'est également traduite par une attention particulière portée à
+							la qualité des messages de commit et à la revue de code par les pairs, garantissant
+							l'homogénéité et la qualité du dépôt commun. </p>
+						<p style="text-indent: 50px">
+							Enfin, j'ai toujours favorisé une communication transparente et inclusive au sein de mes
+							équipes. En assumant alternativement des rôles de lead technique ou de contributeur
+							spécialisé, j'ai appris à arbitrer les choix technologiques de manière collégiale et à
+							documenter les décisions d'architecture. Cette intelligence collective est, selon moi, le
+							moteur essentiel pour surmonter les points de blocage complexes et garantir la livraison
+							d'un produit qui dépasse la simple somme des compétences individuelles.
+						<h4>🔍 Preuve de réalisation</h4>
+						<p>Pour ancrer cet outil coopératif en temps réel, voici une de mes habitudes professionnelles
+							illustrant un cycle de contribution asynchrone maîtrisé sous Git :</p>
+						<pre
+							style="background: #252526; color: rgba(255,255,255,0.8); padding: 15px; border-radius: 5px;"><code>
 # Processus collaboratif standard en terminal
 $ git checkout -b feature/carte-interactive
 $ git add src/map.js
@@ -244,77 +486,83 @@ $ git push origin feature/carte-interactive
 # Espace de relecture avant intégration à la branche Main
 # Utilisation formelle de l'outil GitLab pour organiser la 'Code Review' avec l'équipe
 </code></pre>
+						</div>
+					</div>
 				</div>
-			</section>
-		</article>
+			</article>
+		</div>
+
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank"
+						rel="noopener noreferrer" class="icon brands fa-linkedin"><span
+							class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer"
+						class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a>
+				</li>
+				<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+
+			</ul>
+		</footer>
+
+
 	</div>
 
-	<footer id="footer">
-		<ul class="icons">
-			<li><a href="https://www.linkedin.com/in/corentin-martinez-638335264/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-			<li><a href="https://github.com/CorentinMartinez29" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			<li><a href="PDF/CV-Martinez-Corentin.pdf" target="_blank" class="CV"><span class="label">CV</span></a></li>
-			<li><button class="copy-email" data-email="corentin.martinez01@etu.umontpellier.fr">Email</button></li>
+	<div id="bg"></div>
 
-		</ul>
-	</footer>
-
-
-</div>
-
-<div id="bg"></div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const copyEmailButtons = document.querySelectorAll('.copy-email');
-		copyEmailButtons.forEach(button => {
-			button.addEventListener('click', () => {
-				const email = button.getAttribute('data-email');
-				if (email) {
-					navigator.clipboard.writeText(email)
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyEmailButtons = document.querySelectorAll('.copy-email');
+			copyEmailButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					const email = button.getAttribute('data-email');
+					if (email) {
+						navigator.clipboard.writeText(email)
 							.then(() => {
 								alert('Email copié dans le presse-papier : ' + email);
 							})
 							.catch(err => {
 								alert('Impossible de copier l\'email : ' + err);
 							});
-				}
+					}
+				});
 			});
 		});
-	});
 
 
-	// Fonction pour basculer l'affichage du contenu
-	function toggleProjectDisplay2(buttonId, contextId) {
-		var btn = document.getElementById(buttonId);
-		if(!btn) return;
-		btn.addEventListener("click", function() {
-			var contexte = document.getElementById(contextId);
-			if (contexte.style.display === "none") {
-				contexte.style.display = "block";  // Afficher le contenu
-				this.textContent = "Cacher détaille compétence"; // Changer le texte du bouton
+				// Nouvelle fonction pour basculer l'affichage du contenu (Accordion)
+		function toggleCompetenceNew(contextId, cardId) {
+			const contexte = document.getElementById(contextId);
+			const card = document.getElementById(cardId);
+			
+			if (!contexte.classList.contains("expanded")) {
+				// Ouvrir
+				contexte.classList.add("expanded");
+				card.classList.add("active");
+				contexte.style.maxHeight = contexte.scrollHeight + "px";
+				
+				setTimeout(() => { 
+					if (contexte.classList.contains("expanded")) contexte.style.maxHeight = "none"; 
+				}, 500);
 			} else {
-				contexte.style.display = "none";  // Cacher le contenu
-				this.textContent = "Afficher détaille compétence"; // Réinitialiser le texte du bouton
+				// Fermer
+				contexte.style.maxHeight = contexte.scrollHeight + "px";
+				void contexte.offsetHeight; // Forcer le recalcul
+				contexte.classList.remove("expanded");
+				card.classList.remove("active");
+				contexte.style.maxHeight = "0px";
 			}
-		});
-	}
+		}
 
-	// Appliquer la fonction à chaque bouton
-	toggleProjectDisplay2("toggleButton1", "contexte1");
-	toggleProjectDisplay2("toggleButton2", "contexte2");
-	toggleProjectDisplay2("toggleButton3", "contexte3");
-	toggleProjectDisplay2("toggleButton4", "contexte4");
-	toggleProjectDisplay2("toggleButton5", "contexte5");
-	toggleProjectDisplay2("toggleButton6", "contexte6");
-
-</script>
+	</script>
 
 
 </body>
+
 </html>
